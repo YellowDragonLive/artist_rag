@@ -1,4 +1,10 @@
-chromadb>=0.5.0
+# RAG 引擎依赖 (方案 A: ChromaDB + ONNX)
+# 使用环境: C:\Users\13410\rag_env (用户目录 conda env)
+#
+# onnxruntime 必须用 conda-forge CPU 版安装, 不能用 pip wheel (DLL 冲突):
+#   conda install -p C:\Users\13410\rag_env -c conda-forge "onnxruntime=1.26.0=py310he3e056b_0_cpu"
+chromadb>=1.5.0
 fastapi>=0.100.0
 uvicorn>=0.20.0
 pydantic>=2.0.0
+scikit-learn>=1.0.0

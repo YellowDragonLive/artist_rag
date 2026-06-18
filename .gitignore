@@ -7,3 +7,43 @@ Thumbs.db
 
 # 大图排除，仅保留 thumbnails/
 artist_style_test_20260526/*.png
+
+# 生成图片（SDXL 文生图产物，不入库）
+half_mecha_girl_*/
+*.sqlite3
+*.sqlite3-journal
+rag_knowledge_base/chroma_db/
+
+# 生成的 AI 图片（批量产物，不提交二进制）
+half_mecha_girl_*/
+*.png
+
+# ChromaDB 向量索引（二进制，按需重建）
+rag_knowledge_base/chroma_db/
+
+# 生成图片目录（文生图产物，非源码）
+half_mecha_girl_*/
+__pycache__/
+rag_engine/__pycache__/
+
+# ChromaDB 持久化数据（可由 builder 重建）
+rag_knowledge_base/chroma_db/
+
+# 生成的图片不提交（产物非源码）
+half_mecha_girl_*/
+*.png
+!artist_style_test_20260526/thumbnails/*.png
+
+# ChromaDB 向量索引（可由 builder 重建）
+rag_knowledge_base/chroma_db/
+
+# Python 缓存
+*.egg-info/
+.pytest_cache/
+
+# 生成图目录（文生图产物，非源码）
+half_mecha_girl_*/
+outputs/
+
+# ChromaDB 向量索引（二进制，可重建）
+rag_knowledge_base/chroma_db/

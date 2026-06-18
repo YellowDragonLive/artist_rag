@@ -1,128 +1,130 @@
 # -*- coding: utf-8 -*-
 """
-RAG 引擎 - 轻量级向量存储与检索
-使用 scikit-learn TF-IDF + Cosine Similarity 实现语义检索
-无需 PyTorch / ONNX / ChromaDB 等重依赖
+RAG 引擎 - ChromaDB 向量存储与检索 (方案 A)
+
+使用 ChromaDB + 默认 ONNX 嵌入函数 (all-MiniLM-L6-v2) 实现语义检索。
+依赖: chromadb, onnxruntime (conda-forge CPU 版), scikit-learn (ChromaDB 间接依赖)
+
+环境要求: C:\\Users\\13410\\rag_env (用户目录 conda env, 隔离 DLL 冲突)
 """
-import json
 import logging
 import os
-import pickle
 from typing import Optional
 
-from .config import RAG_DB_DIR, DEFAULT_TOP_K, NOOBAI_DATA_FILE, COLLECTED_PROFILES
+import chromadb
+from chromadb.config import Settings
+from chromadb.utils import embedding_functions
+
+from .config import (
+    RAG_DB_DIR,
+    CHROMA_COLLECTION_NAME,
+    DEFAULT_TOP_K,
+)
 from .chunker import ArtistChunk
 
 logger = logging.getLogger(__name__)
 
-# 全局缓存
-_vectorizer = None
-_tfidf_matrix = None
-_chunk_store: list[dict] = []
-_INDEX_FILE = os.path.join(RAG_DB_DIR, "tfidf_index.pkl")
+# 全局客户端与集合缓存
+_client: Optional[chromadb.api.ClientAPI] = None
+_collection: Optional[chromadb.api.Collection] = None
+_embedding_function = None
 
 
-def _load_index() -> bool:
-    """从磁盘加载持久化的 TF-IDF 索引"""
-    global _vectorizer, _tfidf_matrix, _chunk_store
-
-    if _vectorizer is not None:
-        return True
-
-    if not os.path.exists(_INDEX_FILE):
-        return False
-
-    try:
-        with open(_INDEX_FILE, "rb") as f:
-            data = pickle.load(f)
-        _vectorizer = data["vectorizer"]
-        _tfidf_matrix = data["matrix"]
-        _chunk_store = data["chunks"]
-        logger.info(f"已从磁盘加载索引: {len(_chunk_store)} 条记录")
-        return True
-    except (EOFError, pickle.UnpicklingError, KeyError) as e:
-        logger.warning(f"索引加载失败: {e}")
-        return False
-
-
-def _save_index() -> None:
-    """将 TF-IDF 索引持久化到磁盘"""
-    os.makedirs(RAG_DB_DIR, exist_ok=True)
-    with open(_INDEX_FILE, "wb") as f:
-        pickle.dump(
-            {
-                "vectorizer": _vectorizer,
-                "matrix": _tfidf_matrix,
-                "chunks": _chunk_store,
-            },
-            f,
+def _get_client() -> chromadb.api.ClientAPI:
+    """获取(惰性初始化) ChromaDB PersistentClient"""
+    global _client
+    if _client is None:
+        os.makedirs(RAG_DB_DIR, exist_ok=True)
+        _client = chromadb.PersistentClient(
+            path=RAG_DB_DIR,
+            settings=Settings(anonymized_telemetry=False, allow_reset=True),
         )
-    logger.info(f"索引已保存至: {_INDEX_FILE}")
+        logger.info(f"ChromaDB PersistentClient 已初始化: {RAG_DB_DIR}")
+    return _client
+
+
+def _get_embedding_function():
+    """获取(惰性初始化) 默认 ONNX 嵌入函数"""
+    global _embedding_function
+    if _embedding_function is None:
+        # ChromaDB 默认嵌入函数: all-MiniLM-L6-v2 (ONNX, 384维)
+        # 首次调用会下载模型至 ~/.cache/chroma/onnx_models/
+        _embedding_function = embedding_functions.DefaultEmbeddingFunction()
+        logger.info("DefaultEmbeddingFunction (all-MiniLM-L6-v2 ONNX) 已初始化")
+    return _embedding_function
+
+
+def _get_collection() -> chromadb.api.Collection:
+    """获取(惰性初始化) 目标 Collection"""
+    global _collection
+    if _collection is None:
+        client = _get_client()
+        ef = _get_embedding_function()
+        _collection = client.get_or_create_collection(
+            name=CHROMA_COLLECTION_NAME,
+            embedding_function=ef,
+            metadata={"hnsw:space": "cosine"},
+        )
+        logger.info(f"Collection 已就绪: {CHROMA_COLLECTION_NAME}")
+    return _collection
 
 
 def build_index(chunks: list[ArtistChunk], force_rebuild: bool = False) -> int:
     """
-    构建 TF-IDF 向量索引
+    构建 ChromaDB 向量索引
 
     Args:
         chunks: 文本块列表
-        force_rebuild: 是否强制重建
+        force_rebuild: 是否强制重建(删除已有 collection 后重建)
 
     Returns:
         索引中的记录数
     """
-    global _vectorizer, _tfidf_matrix, _chunk_store
+    client = _get_client()
+    ef = _get_embedding_function()
 
-    if not force_rebuild and _load_index():
-        logger.info("使用已有索引")
-        return len(_chunk_store)
+    if force_rebuild:
+        # 删除已有 collection 后重建
+        try:
+            client.delete_collection(name=CHROMA_COLLECTION_NAME)
+            logger.info(f"已删除旧 collection: {CHROMA_COLLECTION_NAME}")
+        except Exception:
+            # collection 不存在时静默忽略
+            pass
+        global _collection
+        _collection = None
 
-    try:
-        from sklearn.feature_extraction.text import TfidfVectorizer
-    except ImportError as exc:
-        raise ImportError(
-            "请先安装 scikit-learn: pip install scikit-learn"
-        ) from exc
+    collection = _get_collection()
 
-    # 准备文档
-    documents = []
-    _chunk_store = []
-
-    for chunk in chunks:
-        documents.append(chunk.content)
-        _chunk_store.append(
+    # 批量插入 (ChromaDB upsert, 幂等)
+    batch_size = 100
+    total = 0
+    for i in range(0, len(chunks), batch_size):
+        batch = chunks[i : i + batch_size]
+        ids = [c.chunk_id for c in batch]
+        documents = [c.content for c in batch]
+        metadatas = [
             {
-                "chunk_id": chunk.chunk_id,
-                "artist_name": chunk.artist_name,
-                "artist_index": chunk.artist_index,
-                "content": chunk.content,
-                "chunk_type": chunk.chunk_type,
-                "metadata": {
-                    **chunk.metadata,
-                    "artist_name": chunk.artist_name,
-                    "artist_index": chunk.artist_index,
-                    "chunk_type": chunk.chunk_type,
-                },
+                **c.metadata,
+                "artist_name": c.artist_name,
+                "artist_index": c.artist_index,
+                "chunk_type": c.chunk_type,
+                # ChromaDB metadata 值必须是基础类型, is_core 转 str
+                "is_core": str(c.metadata.get("is_core", False)),
             }
+            for c in batch
+        ]
+        collection.upsert(
+            ids=ids,
+            documents=documents,
+            metadatas=metadatas,
         )
+        total += len(batch)
 
-    # 构建 TF-IDF 向量化器
-    # 使用 char_wb analyzer 支持中英文混合检索
-    _vectorizer = TfidfVectorizer(
-        analyzer="char_wb",
-        ngram_range=(2, 4),  # 2-4字元的n-gram
-        max_features=20000,
-        sublinear_tf=True,
-        min_df=1,
+    logger.info(
+        f"ChromaDB 索引构建完成: {total} 条文档 -> collection '{CHROMA_COLLECTION_NAME}'"
     )
-
-    _tfidf_matrix = _vectorizer.fit_transform(documents)
-
-    # 持久化
-    _save_index()
-
-    logger.info(f"TF-IDF 索引构建完成: {len(documents)} 条文档, {_tfidf_matrix.shape[1]} 个特征")
-    return len(documents)
+    return total
 
 
 def search(
@@ -134,8 +136,7 @@ def search(
     """
     在知识库中检索最相关的画师风格
 
-    使用 TF-IDF + Cosine Similarity 进行检索
-    支持中英文混合查询
+    使用 ChromaDB + ONNX 嵌入进行语义检索
 
     Args:
         query: 查询文本
@@ -146,57 +147,65 @@ def search(
     Returns:
         检索结果列表
     """
-    if not _load_index():
-        logger.warning("索引未构建，请先运行 builder")
+    try:
+        collection = _get_collection()
+    except Exception as e:
+        logger.warning(f"Collection 未就绪: {e}")
         return []
 
+    # 构建 where 过滤条件
+    where = {}
+    if chunk_type:
+        where["chunk_type"] = chunk_type
+    if core_only:
+        where["is_core"] = "True"
+
+    # ChromaDB query 需要 n_results >= top_k (因为可能同画师多 chunk)
+    fetch_n = top_k * 4 if top_k > 0 else 20
+
     try:
-        from sklearn.metrics.pairwise import cosine_similarity
-    except ImportError as exc:
-        raise ImportError("请先安装 scikit-learn") from exc
+        results = collection.query(
+            query_texts=[query],
+            n_results=fetch_n,
+            where=where if where else None,
+        )
+    except Exception as e:
+        logger.error(f"ChromaDB 查询失败: {e}")
+        return []
 
-    # 将查询转换为 TF-IDF 向量
-    query_vec = _vectorizer.transform([query])
+    # 解析结果 (ChromaDB 返回 dict of lists)
+    ids_batch = results.get("ids", [[]])
+    docs_batch = results.get("documents", [[]])
+    metas_batch = results.get("metadatas", [[]])
+    dists_batch = results.get("distances", [[]])
 
-    # 计算余弦相似度
-    similarities = cosine_similarity(query_vec, _tfidf_matrix).flatten()
+    if not ids_batch or not ids_batch[0]:
+        return []
 
-    # 过滤和排序
-    scored_results = []
-    for idx, sim_score in enumerate(similarities):
-        if sim_score <= 0:
-            continue
-
-        chunk = _chunk_store[idx]
-
-        # 类型过滤
-        if chunk_type and chunk.get("chunk_type") != chunk_type:
-            continue
-
-        # 核心画师过滤
-        if core_only:
-            is_core = chunk.get("metadata", {}).get("is_core", "False")
-            if is_core != "True" and is_core is not True:
-                continue
-
-        scored_results.append(
+    scored = []
+    for idx, cid in enumerate(ids_batch[0]):
+        distance = dists_batch[0][idx] if idx < len(dists_batch[0]) else 1.0
+        # cosine distance -> similarity
+        similarity = round(1.0 - float(distance), 4)
+        meta = metas_batch[0][idx] if idx < len(metas_batch[0]) else {}
+        scored.append(
             {
-                "chunk_id": chunk["chunk_id"],
-                "artist_name": chunk["artist_name"],
-                "artist_index": chunk["artist_index"],
-                "content": chunk["content"],
-                "similarity": round(float(sim_score), 4),
-                "metadata": chunk.get("metadata", {}),
+                "chunk_id": cid,
+                "artist_name": meta.get("artist_name", ""),
+                "artist_index": meta.get("artist_index", -1),
+                "content": docs_batch[0][idx] if idx < len(docs_batch[0]) else "",
+                "similarity": similarity,
+                "metadata": meta,
             }
         )
 
-    # 按相似度降序排列
-    scored_results.sort(key=lambda x: x["similarity"], reverse=True)
+    # 按相似度降序
+    scored.sort(key=lambda x: x["similarity"], reverse=True)
 
-    # 去重（同一画师只保留最高分的结果）
+    # 去重 (同一画师只保留最高分)
     seen_artists = set()
     deduped = []
-    for r in scored_results:
+    for r in scored:
         if r["artist_name"] not in seen_artists:
             seen_artists.add(r["artist_name"])
             deduped.append(r)
@@ -208,10 +217,18 @@ def search(
 
 def get_stats() -> dict:
     """获取知识库统计信息"""
-    _load_index()
+    index_exists = os.path.exists(os.path.join(RAG_DB_DIR, "chroma.sqlite3"))
+    total_chunks = 0
+    try:
+        collection = _get_collection()
+        total_chunks = collection.count()
+    except Exception:
+        pass
+
     return {
-        "total_chunks": len(_chunk_store),
-        "index_file": _INDEX_FILE,
-        "index_exists": os.path.exists(_INDEX_FILE),
-        "engine": "TF-IDF (scikit-learn)",
+        "total_chunks": total_chunks,
+        "index_file": os.path.join(RAG_DB_DIR, "chroma.sqlite3"),
+        "index_exists": index_exists,
+        "engine": "ChromaDB + all-MiniLM-L6-v2 ONNX",
+        "collection_name": CHROMA_COLLECTION_NAME,
     }

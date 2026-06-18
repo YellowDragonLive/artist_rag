@@ -19,8 +19,9 @@ RAG_DB_DIR = os.path.join(RAG_BASE_DIR, "chroma_db")
 # ChromaDB 配置
 CHROMA_COLLECTION_NAME = "noobai_artist_styles"
 
-# 嵌入模型配置
-EMBEDDING_MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
+# 嵌入模型 (ChromaDB DefaultEmbeddingFunction = all-MiniLM-L6-v2 ONNX, 384维)
+# 此常量仅作记录, 实际由 ChromaDB 默认嵌入函数提供
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2 (ONNX, via ChromaDB DefaultEmbeddingFunction)"
 
 # 检索配置
 DEFAULT_TOP_K = 5  # 默认返回前 K 个最相关结果

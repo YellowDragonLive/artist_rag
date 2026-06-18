@@ -7,28 +7,28 @@ echo     NoobAI Artist Style RAG - Knowledge Base Server
 echo ============================================================
 echo.
 
-echo [Step 1] Checking Python dependencies (scikit-learn)...
-pip install -q scikit-learn fastapi uvicorn 2>nul
-if %errorlevel% neq 0 (
-    echo [WARNING] Some dependencies may not have installed correctly.
-    echo [WARNING] Please run: pip install scikit-learn fastapi uvicorn
+set "PY=C:\Users\13410\rag_env\python.exe"
+if not exist "%PY%" (
+    echo [ERROR] RAG env python not found: %PY%
+    echo [ERROR] Please create env: conda create -p C:\Users\13410\rag_env python=3.10
+    pause
+    exit /b 1
 )
 
-echo.
-echo [Step 2] Checking/Creating knowledge base index...
+echo [Step 1] Checking knowledge base index...
 cd /d "%~dp0"
-if not exist "rag_knowledge_base\chroma_db\tfidf_index.pkl" (
+if not exist "rag_knowledge_base\chroma_db\chroma.sqlite3" (
     echo [INFO] Index not found, building from scratch...
-    python -X utf8 -m rag_engine.builder --force
+    "%PY%" -X utf8 -m rag_engine.builder --force
 ) else (
     echo [INFO] Index exists, skipping build. Use --force to rebuild.
 )
 
 echo.
-echo [Step 3] Starting RAG API Server on port 3001...
+echo [Step 2] Starting RAG API Server on port 3001...
 echo [INFO] API: POST /api/rag/search  GET /api/rag/search?q=...  GET /api/rag/stats
 echo [INFO] Press Ctrl+C to stop.
 echo ============================================================
-python -X utf8 -m rag_engine.server
+"%PY%" -X utf8 -m rag_engine.server
 
 pause
