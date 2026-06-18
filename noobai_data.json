@@ -1,0 +1,5487 @@
+{
+  "artists": [
+    {
+      "name": "dore \\(gilles dore\\)",
+      "styles": [
+        "古典铜版画",
+        "精细排线",
+        "明暗对照",
+        "史诗复古",
+        "chiaroscuro",
+        "etching print style",
+        "classical sketch",
+        "baroque"
+      ]
+    },
+    {
+      "name": "gyarusatan",
+      "styles": []
+    },
+    {
+      "name": "nawakena",
+      "styles": [
+        "半厚涂",
+        "温润色彩",
+        "精致五官",
+        "柔和光影",
+        "圆润线条",
+        "温柔系",
+        "semi-painterly",
+        "warm color palette",
+        "delicate facial features",
+        "soft shading",
+        "smooth lines",
+        "gentle aesthetic"
+      ]
+    },
+    {
+      "name": "toho10min",
+      "styles": []
+    },
+    {
+      "name": "veryhardloco",
+      "styles": []
+    },
+    {
+      "name": "nekoda \\(maoda\\)",
+      "styles": []
+    },
+    {
+      "name": "maze yuri",
+      "styles": []
+    },
+    {
+      "name": "binggong asylum",
+      "styles": []
+    },
+    {
+      "name": "noriko \\(ni noriko\\)",
+      "styles": [
+        "清新萌系",
+        "纤细线条",
+        "水润眼瞳",
+        "柔和平涂",
+        "青春活力",
+        "透亮色调",
+        "fresh moe style",
+        "thin lineart",
+        "jewel-like eyes",
+        "soft flat coloring",
+        "youthful",
+        "bright tones"
+      ]
+    },
+    {
+      "name": "yanghua gaizi",
+      "styles": []
+    },
+    {
+      "name": "roarke \\(lavenderincubus\\)",
+      "styles": []
+    },
+    {
+      "name": "j.moon",
+      "styles": []
+    },
+    {
+      "name": "anegawa eiji",
+      "styles": []
+    },
+    {
+      "name": "aizawa marimo",
+      "styles": []
+    },
+    {
+      "name": "myung yi",
+      "styles": [
+        "韩式唯美",
+        "水光肌肤",
+        "精致CG",
+        "高级灰调",
+        "梦幻氛围",
+        "冷暖交替",
+        "korean glamour",
+        "dewy skin",
+        "polished CG",
+        "refined gray tones",
+        "dreamy atmosphere",
+        "cool-warm contrast"
+      ]
+    },
+    {
+      "name": "shimizu akina",
+      "styles": []
+    },
+    {
+      "name": "hamunezuko \\(nezukonezu32\\)",
+      "styles": []
+    },
+    {
+      "name": "dryseaweed",
+      "styles": []
+    },
+    {
+      "name": "topsu",
+      "styles": []
+    },
+    {
+      "name": "jakuson z",
+      "styles": []
+    },
+    {
+      "name": "fluffyebi01",
+      "styles": []
+    },
+    {
+      "name": "kuro \\(jyupiter\\)",
+      "styles": []
+    },
+    {
+      "name": "jeffr",
+      "styles": []
+    },
+    {
+      "name": "be9459",
+      "styles": []
+    },
+    {
+      "name": "aina123",
+      "styles": []
+    },
+    {
+      "name": "persimmonszzz",
+      "styles": []
+    },
+    {
+      "name": "koukoupunch",
+      "styles": []
+    },
+    {
+      "name": "chuby mi",
+      "styles": []
+    },
+    {
+      "name": "shiroshisu",
+      "styles": []
+    },
+    {
+      "name": "shin'en \\(gyokuro company\\)",
+      "styles": []
+    },
+    {
+      "name": "suzuhane suzu",
+      "styles": []
+    },
+    {
+      "name": "minakami \\(flyingman555\\)",
+      "styles": []
+    },
+    {
+      "name": "konoshige \\(ryuun\\)",
+      "styles": []
+    },
+    {
+      "name": "rapa rachi",
+      "styles": []
+    },
+    {
+      "name": "garden01",
+      "styles": []
+    },
+    {
+      "name": "kuutamo",
+      "styles": []
+    },
+    {
+      "name": "alpha-type",
+      "styles": []
+    },
+    {
+      "name": "sotcho",
+      "styles": []
+    },
+    {
+      "name": "minew",
+      "styles": []
+    },
+    {
+      "name": "mik blamike",
+      "styles": []
+    },
+    {
+      "name": "mashima jirou",
+      "styles": []
+    },
+    {
+      "name": "wolffeld price",
+      "styles": []
+    },
+    {
+      "name": "b.c.n.y.",
+      "styles": []
+    },
+    {
+      "name": "supullim",
+      "styles": []
+    },
+    {
+      "name": "eu03",
+      "styles": []
+    },
+    {
+      "name": "xuuikie ashe",
+      "styles": []
+    },
+    {
+      "name": "magion02",
+      "styles": []
+    },
+    {
+      "name": "oruka \\(kamituki0827\\)",
+      "styles": []
+    },
+    {
+      "name": "bikkii",
+      "styles": []
+    },
+    {
+      "name": "hiiragi yuuichi",
+      "styles": []
+    },
+    {
+      "name": "jack dempa",
+      "styles": []
+    },
+    {
+      "name": "artist:horn/wood",
+      "styles": []
+    },
+    {
+      "name": "sunya \\(honorin-yuunibo\\)",
+      "styles": []
+    },
+    {
+      "name": "zerogravitas",
+      "styles": []
+    },
+    {
+      "name": "belka dog",
+      "styles": []
+    },
+    {
+      "name": "oyuwari",
+      "styles": []
+    },
+    {
+      "name": "kantoku",
+      "styles": [
+        "格子制服",
+        "通透光质",
+        "格子裙",
+        "半透明发丝",
+        "午后阳光",
+        "清纯校园",
+        "plaid skirt",
+        "transparent hair",
+        "sunbeams",
+        "soft innocent eyes"
+      ]
+    },
+    {
+      "name": "haidara",
+      "styles": []
+    },
+    {
+      "name": "mavezar",
+      "styles": []
+    },
+    {
+      "name": "yoya yogurt",
+      "styles": []
+    },
+    {
+      "name": "ryokucha michi",
+      "styles": []
+    },
+    {
+      "name": "ojipon",
+      "styles": []
+    },
+    {
+      "name": "keibeam",
+      "styles": []
+    },
+    {
+      "name": "hyuk \\(yeayeo\\)",
+      "styles": []
+    },
+    {
+      "name": "riz",
+      "styles": []
+    },
+    {
+      "name": "chomikuplus",
+      "styles": [
+        "糖果色",
+        "水润御姐",
+        "丝滑发丝",
+        "温柔五官",
+        "温润水粉",
+        "细腻上色",
+        "candy colors",
+        "smooth hair",
+        "gentle face",
+        "soft watercolor"
+      ]
+    },
+    {
+      "name": "wingedwasabi",
+      "styles": []
+    },
+    {
+      "name": "cromwellb",
+      "styles": [
+        "韩式半写实",
+        "战术风格",
+        "沉稳配色",
+        "强光影对比",
+        "细腻肤质",
+        "帅气女角",
+        "korean semi-realistic",
+        "tactical style",
+        "subdued palette",
+        "strong contrast",
+        "detailed skin",
+        "cool female characters"
+      ]
+    },
+    {
+      "name": "prab",
+      "styles": []
+    },
+    {
+      "name": "agawa ryou",
+      "styles": []
+    },
+    {
+      "name": "nago purin",
+      "styles": []
+    },
+    {
+      "name": "yanyan \\(shinken gomi\\)",
+      "styles": []
+    },
+    {
+      "name": "satori \\(aosky9077\\)",
+      "styles": []
+    },
+    {
+      "name": "veyonis",
+      "styles": []
+    },
+    {
+      "name": "ixy",
+      "styles": [
+        "清爽同人",
+        "平滑线条",
+        "干净赛璐珞",
+        "高能萌系",
+        "简练上色",
+        "清透画面",
+        "clean cel shading",
+        "smooth lineart",
+        "moe style",
+        "flat colors"
+      ]
+    },
+    {
+      "name": "reagan long",
+      "styles": [
+        "唯美写实",
+        "概念厚涂",
+        "宏大光影",
+        "物理材质",
+        "美式插画",
+        "开阔构图",
+        "realistic concept art",
+        "cinematic lighting",
+        "physical materials",
+        "painterly realism"
+      ]
+    },
+    {
+      "name": "liang xing",
+      "styles": [
+        "半写实动漫",
+        "光润皮肤",
+        "柔和高光",
+        "丝滑发质",
+        "温暖色调",
+        "高级柔光",
+        "semi-realistic anime",
+        "luminous skin",
+        "soft highlights",
+        "silky hair",
+        "warm tones",
+        "luxury soft glow"
+      ]
+    },
+    {
+      "name": "sakuya tsuitachi",
+      "styles": []
+    },
+    {
+      "name": "fried bocky",
+      "styles": []
+    },
+    {
+      "name": "sana!rpg",
+      "styles": []
+    },
+    {
+      "name": "cafe au lait \\(kafeore\\)",
+      "styles": []
+    },
+    {
+      "name": "suo bu ye feng",
+      "styles": []
+    },
+    {
+      "name": "sawatani \\( swt2\\)",
+      "styles": []
+    },
+    {
+      "name": "yanazuri \\(kimossari337\\)",
+      "styles": []
+    },
+    {
+      "name": "piromizu",
+      "styles": [
+        "柔美水彩",
+        "朦胧光晕",
+        "通透色彩",
+        "萌系可爱",
+        "蓬松发丝",
+        "花卉点缀",
+        "soft watercolor",
+        "hazy glow",
+        "transparent colors",
+        "cute moe",
+        "fluffy hair",
+        "floral accents"
+      ]
+    },
+    {
+      "name": "kekemotsu",
+      "styles": []
+    },
+    {
+      "name": "roxxxan",
+      "styles": []
+    },
+    {
+      "name": "macosee",
+      "styles": []
+    },
+    {
+      "name": "artnip",
+      "styles": []
+    },
+    {
+      "name": "akai sashimi",
+      "styles": []
+    },
+    {
+      "name": "1=2",
+      "styles": []
+    },
+    {
+      "name": "qtime 702",
+      "styles": []
+    },
+    {
+      "name": "interstellar",
+      "styles": []
+    },
+    {
+      "name": "mikel \\(4hands\\)",
+      "styles": []
+    },
+    {
+      "name": "gibun \\(sozoshu\\)",
+      "styles": []
+    },
+    {
+      "name": "hintobento",
+      "styles": []
+    },
+    {
+      "name": "polilla",
+      "styles": []
+    },
+    {
+      "name": "kionaoki",
+      "styles": []
+    },
+    {
+      "name": "mleth",
+      "styles": []
+    },
+    {
+      "name": "seito edaha",
+      "styles": []
+    },
+    {
+      "name": "shinori",
+      "styles": []
+    },
+    {
+      "name": "kaneni",
+      "styles": []
+    },
+    {
+      "name": "moi'dukdum",
+      "styles": []
+    },
+    {
+      "name": "silveroid",
+      "styles": []
+    },
+    {
+      "name": "kusaka souji",
+      "styles": []
+    },
+    {
+      "name": "greem bang",
+      "styles": []
+    },
+    {
+      "name": "mm \\(yoromu\\)",
+      "styles": []
+    },
+    {
+      "name": "stukov",
+      "styles": []
+    },
+    {
+      "name": "m4rjinn",
+      "styles": []
+    },
+    {
+      "name": "bdone",
+      "styles": []
+    },
+    {
+      "name": "iparupua",
+      "styles": []
+    },
+    {
+      "name": "robusta mania",
+      "styles": []
+    },
+    {
+      "name": "muchi maro",
+      "styles": []
+    },
+    {
+      "name": "hori \\(hori no su\\)",
+      "styles": []
+    },
+    {
+      "name": "redi \\(rasec asdjh\\)",
+      "styles": []
+    },
+    {
+      "name": "hitch \\(perotoss\\)",
+      "styles": []
+    },
+    {
+      "name": "mibu natsuki",
+      "styles": []
+    },
+    {
+      "name": "kabocha torute",
+      "styles": []
+    },
+    {
+      "name": "noripachi",
+      "styles": []
+    },
+    {
+      "name": "greco roman \\(spiral brain\\)",
+      "styles": []
+    },
+    {
+      "name": "seura isago",
+      "styles": []
+    },
+    {
+      "name": "kumakichi \\(cost-lost\\)",
+      "styles": [
+        "写实解剖",
+        "丰满肉感",
+        "硬朗线条",
+        "暖色调",
+        "弹性胴体",
+        "成人厚涂",
+        "realistic anatomy",
+        "voluptuous flesh",
+        "bold lines",
+        "warm tones",
+        "elastic body",
+        "mature thick painting"
+      ]
+    },
+    {
+      "name": "ozyasadayo",
+      "styles": []
+    },
+    {
+      "name": "mogudan",
+      "styles": [
+        "复古Galgame",
+        "高反光肉体",
+        "红润脸颊",
+        "丰满轮廓",
+        "经典同人",
+        "亮面肤色",
+        "retro galgame",
+        "glossy body",
+        "rosy cheeks",
+        "voluptuous curves"
+      ]
+    },
+    {
+      "name": "kuro \\(tbm9187\\)",
+      "styles": []
+    },
+    {
+      "name": "41 \\(taskmaster41\\)",
+      "styles": []
+    },
+    {
+      "name": "yamamoto arifred",
+      "styles": []
+    },
+    {
+      "name": "tokiwa midori \\(kyokutou funamushi\\)",
+      "styles": []
+    },
+    {
+      "name": "branch \\(blackrabbits\\)",
+      "styles": []
+    },
+    {
+      "name": "pandain",
+      "styles": []
+    },
+    {
+      "name": "pparus",
+      "styles": []
+    },
+    {
+      "name": "tirotata",
+      "styles": []
+    },
+    {
+      "name": "aoi masami",
+      "styles": []
+    },
+    {
+      "name": "daiaru",
+      "styles": []
+    },
+    {
+      "name": "gaptax",
+      "styles": []
+    },
+    {
+      "name": "kitiroku",
+      "styles": []
+    },
+    {
+      "name": "shoujo donburi",
+      "styles": []
+    },
+    {
+      "name": "shiro kuma shake",
+      "styles": []
+    },
+    {
+      "name": "ko yu",
+      "styles": []
+    },
+    {
+      "name": "bea \\(bropmlk\\)",
+      "styles": []
+    },
+    {
+      "name": "jirusu",
+      "styles": []
+    },
+    {
+      "name": "hinghoi",
+      "styles": []
+    },
+    {
+      "name": "mayonaka taruho",
+      "styles": []
+    },
+    {
+      "name": "izawa \\(bhive003\\)",
+      "styles": []
+    },
+    {
+      "name": "gentsuki",
+      "styles": []
+    },
+    {
+      "name": "watanabe wataru \\(character designer\\)",
+      "styles": []
+    },
+    {
+      "name": "akatsuki myuuto",
+      "styles": []
+    },
+    {
+      "name": "kooemong",
+      "styles": []
+    },
+    {
+      "name": "ssaf seibeupail",
+      "styles": []
+    },
+    {
+      "name": "tedain",
+      "styles": [
+        "精致赛璐珞",
+        "清晰线条",
+        "明快配色",
+        "二分光影",
+        "高质同人",
+        "整洁画面",
+        "polished cel shading",
+        "clean lines",
+        "bright colors",
+        "two-tone shadow",
+        "high quality fan art",
+        "neat composition"
+      ]
+    },
+    {
+      "name": "velzhe",
+      "styles": []
+    },
+    {
+      "name": "kawaraya a-ta",
+      "styles": []
+    },
+    {
+      "name": "kincora",
+      "styles": []
+    },
+    {
+      "name": "yuyumu",
+      "styles": []
+    },
+    {
+      "name": "machi \\(7769\\)",
+      "styles": []
+    },
+    {
+      "name": "kabu usagi",
+      "styles": []
+    },
+    {
+      "name": "ilya kuvshinov",
+      "styles": []
+    },
+    {
+      "name": "greatodoggo",
+      "styles": []
+    },
+    {
+      "name": "qizhu",
+      "styles": []
+    },
+    {
+      "name": "omone hokoma agm",
+      "styles": []
+    },
+    {
+      "name": "poharo",
+      "styles": []
+    },
+    {
+      "name": "zhudouzi",
+      "styles": []
+    },
+    {
+      "name": "naoillus",
+      "styles": []
+    },
+    {
+      "name": "kyuri tizu",
+      "styles": []
+    },
+    {
+      "name": "ama mitsuki",
+      "styles": []
+    },
+    {
+      "name": "yomu \\(sgt epper\\)",
+      "styles": [
+        "丝袜物理学",
+        "裤袜透肉",
+        "绷紧褶皱",
+        "日常故事感",
+        "腿部张力",
+        "织物质感",
+        "pantyhose physics",
+        "sheer tights",
+        "fabric tension",
+        "slice of life"
+      ]
+    },
+    {
+      "name": "mignon",
+      "styles": [
+        "绝对领域",
+        "黑丝袜",
+        "臀腿高光",
+        "勒肉褶皱",
+        "肉感反光",
+        "腿部特写",
+        "zettai ryouiki",
+        "black pantyhose",
+        "glossy thighs",
+        "tight fabric"
+      ]
+    },
+    {
+      "name": "ushiyama ame",
+      "styles": [
+        "萌系",
+        "清新水彩",
+        "厚发",
+        "大眼",
+        "治愈系",
+        "moe",
+        "watercolor style",
+        "soft lighting"
+      ]
+    },
+    {
+      "name": "tony taka",
+      "styles": [
+        "传奇Galgame",
+        "光明风",
+        "丝滑线条",
+        "水润肤色",
+        "华丽复古",
+        "千禧年美少女",
+        "smooth lineart",
+        "glossy skin",
+        "classic galgame",
+        "bright colors"
+      ]
+    },
+    {
+      "name": "ningen mame",
+      "styles": [
+        "柔软萌系",
+        "圆润面部",
+        "明亮大眼",
+        "温暖治愈",
+        "干净平涂",
+        "柔和阴影",
+        "soft moe",
+        "round face",
+        "bright big eyes",
+        "warm healing",
+        "clean flat color",
+        "gentle shadow"
+      ]
+    },
+    {
+      "name": "rokuwata tomoe",
+      "styles": []
+    },
+    {
+      "name": "pingpangpongpang",
+      "styles": []
+    },
+    {
+      "name": "suda ayaka",
+      "styles": []
+    },
+    {
+      "name": "buri \\(retty9349\\)",
+      "styles": []
+    },
+    {
+      "name": "yayoi maka",
+      "styles": []
+    },
+    {
+      "name": "tomo0843",
+      "styles": []
+    },
+    {
+      "name": "sumiosmith",
+      "styles": []
+    },
+    {
+      "name": "xiujia yihuizi",
+      "styles": [
+        "中式唯美",
+        "华丽色彩",
+        "东方韵味",
+        "飘逸衣袂",
+        "大气光影",
+        "精致装饰",
+        "chinese glamour",
+        "ornate colors",
+        "oriental charm",
+        "flowing robes",
+        "grand lighting",
+        "elaborate accessories"
+      ]
+    },
+    {
+      "name": "chin gero",
+      "styles": []
+    },
+    {
+      "name": "yaoshi jun",
+      "styles": []
+    },
+    {
+      "name": "jun \\(navigavi\\)",
+      "styles": [
+        "唯美半厚涂",
+        "柔和雅致",
+        "丝滑光影",
+        "温柔含蓄",
+        "精致发丝",
+        "静谧优雅",
+        "beautiful semi-painterly",
+        "soft elegant",
+        "smooth lighting",
+        "gentle expression",
+        "detailed hair",
+        "serene elegance"
+      ]
+    },
+    {
+      "name": "aos",
+      "styles": []
+    },
+    {
+      "name": "ulrich \\(tagaragakuin\\)",
+      "styles": []
+    },
+    {
+      "name": "try \\(lsc\\)",
+      "styles": []
+    },
+    {
+      "name": "eliskalti",
+      "styles": []
+    },
+    {
+      "name": "seeshin see",
+      "styles": [
+        "清透赛璐珞",
+        "精致流线",
+        "鲜明色彩",
+        "清爽美少女",
+        "明快光影",
+        "通透现代",
+        "crystal cel shading",
+        "refined lines",
+        "vivid colors",
+        "fresh bishoujo",
+        "bright shading",
+        "transparent modern"
+      ]
+    },
+    {
+      "name": "hara kenshi",
+      "styles": []
+    },
+    {
+      "name": "akipeko",
+      "styles": []
+    },
+    {
+      "name": "rib:y\\(uhki\\)",
+      "styles": []
+    },
+    {
+      "name": "flasso",
+      "styles": []
+    },
+    {
+      "name": "atte nanakusa",
+      "styles": []
+    },
+    {
+      "name": "cierra \\(ra-bit\\)",
+      "styles": []
+    },
+    {
+      "name": "shal.e",
+      "styles": [
+        "韩式清冷",
+        "水光厚涂",
+        "冷淡神情",
+        "精致五官",
+        "冷光皮肤",
+        "唯美CG",
+        "korean CG",
+        "cool lighting",
+        "delicate face",
+        "glossy skin"
+      ]
+    },
+    {
+      "name": "eonsang",
+      "styles": [
+        "轻厚涂",
+        "高对比度",
+        "战术少女",
+        "精细褶皱",
+        "semi-realistic render",
+        "high-key lighting",
+        "tactic girl"
+      ]
+    },
+    {
+      "name": "beijuu",
+      "styles": []
+    },
+    {
+      "name": "kagematsuri",
+      "styles": []
+    },
+    {
+      "name": "yuli \\(yulipo\\)",
+      "styles": []
+    },
+    {
+      "name": "neneneji",
+      "styles": []
+    },
+    {
+      "name": "serizawa \\(serizawaroom\\)",
+      "styles": []
+    },
+    {
+      "name": "kashu \\(hizake\\)",
+      "styles": []
+    },
+    {
+      "name": "jun daniell",
+      "styles": []
+    },
+    {
+      "name": "mh2en",
+      "styles": []
+    },
+    {
+      "name": "amane ruri",
+      "styles": []
+    },
+    {
+      "name": "nylon \\(nylon 100%\\)",
+      "styles": []
+    },
+    {
+      "name": "fukuro daizi",
+      "styles": []
+    },
+    {
+      "name": "lovelyme",
+      "styles": []
+    },
+    {
+      "name": "emyo",
+      "styles": []
+    },
+    {
+      "name": "enosan",
+      "styles": []
+    },
+    {
+      "name": "wowoguni",
+      "styles": []
+    },
+    {
+      "name": "abab xiaxia",
+      "styles": []
+    },
+    {
+      "name": "zzo \\(chorizzzzo\\)",
+      "styles": []
+    },
+    {
+      "name": "kurozawa yui",
+      "styles": []
+    },
+    {
+      "name": "drid",
+      "styles": []
+    },
+    {
+      "name": "tamaki \\(tamaki599\\)",
+      "styles": []
+    },
+    {
+      "name": "yusha m",
+      "styles": []
+    },
+    {
+      "name": "kim eb",
+      "styles": []
+    },
+    {
+      "name": "skysign ft",
+      "styles": []
+    },
+    {
+      "name": "sanbaizu",
+      "styles": []
+    },
+    {
+      "name": "niku \\(hamuchang\\)",
+      "styles": []
+    },
+    {
+      "name": "yoshiwa tomo",
+      "styles": []
+    },
+    {
+      "name": "marushin \\(denwa0214\\)",
+      "styles": []
+    },
+    {
+      "name": "harenchi",
+      "styles": []
+    },
+    {
+      "name": "hxxg",
+      "styles": [
+        "极致厚涂",
+        "深蓝冷色调",
+        "逆光侧光",
+        "低视角",
+        "Glazing",
+        "cool color palette",
+        "dramatic lighting",
+        "backlighting"
+      ]
+    },
+    {
+      "name": "mana \\(remana\\)",
+      "styles": []
+    },
+    {
+      "name": "sezok",
+      "styles": []
+    },
+    {
+      "name": "sakusakusakurai",
+      "styles": []
+    },
+    {
+      "name": "anima \\(togashi\\)",
+      "styles": []
+    },
+    {
+      "name": "gorgeous mushroom",
+      "styles": []
+    },
+    {
+      "name": "youhei \\(testament\\)",
+      "styles": [
+        "硬朗厚涂",
+        "写实倾向",
+        "厚重暗部",
+        "动态构图",
+        "冲击力",
+        "力量感",
+        "bold thick painting",
+        "realistic tendency",
+        "heavy shadows",
+        "dynamic composition",
+        "visual impact",
+        "powerful aesthetic"
+      ]
+    },
+    {
+      "name": "koh\\(minagi kou\\)",
+      "styles": []
+    },
+    {
+      "name": "kkaebing",
+      "styles": []
+    },
+    {
+      "name": "karan",
+      "styles": []
+    },
+    {
+      "name": "sanuki \\(kyoudashya\\)",
+      "styles": []
+    },
+    {
+      "name": "flippy \\(cripine111\\)",
+      "styles": []
+    },
+    {
+      "name": "artist:satou daiji",
+      "styles": []
+    },
+    {
+      "name": "yue3621",
+      "styles": []
+    },
+    {
+      "name": "neiigal",
+      "styles": []
+    },
+    {
+      "name": "aoi 13",
+      "styles": []
+    },
+    {
+      "name": "fymrie",
+      "styles": []
+    },
+    {
+      "name": "rama \\(yu-light8\\)",
+      "styles": []
+    },
+    {
+      "name": "sarhce",
+      "styles": []
+    },
+    {
+      "name": "xzu",
+      "styles": []
+    },
+    {
+      "name": "otokucha",
+      "styles": []
+    },
+    {
+      "name": "mijikayo",
+      "styles": []
+    },
+    {
+      "name": "yanje",
+      "styles": []
+    },
+    {
+      "name": "pyon-kichi",
+      "styles": []
+    },
+    {
+      "name": "akagi kurage",
+      "styles": []
+    },
+    {
+      "name": "as109",
+      "styles": [
+        "深暗色调",
+        "软肉重力",
+        "丰腴肉感",
+        "暗部厚涂",
+        "压迫构图",
+        "重力体态",
+        "dark tones",
+        "soft flesh",
+        "voluptuous anatomy",
+        "heavy shading"
+      ]
+    },
+    {
+      "name": "naxius noxy",
+      "styles": []
+    },
+    {
+      "name": "ru zhai",
+      "styles": []
+    },
+    {
+      "name": "dishui tangni",
+      "styles": [
+        "梦幻半写实",
+        "水晶反光",
+        "奢华柔光",
+        "高亮厚涂",
+        "剔透肤质",
+        "华丽色彩",
+        "crystal highlights",
+        "dreamy semi-realism",
+        "luxury colors",
+        "soft glow"
+      ]
+    },
+    {
+      "name": "sneeze \\(snze\\)",
+      "styles": []
+    },
+    {
+      "name": "agnamore",
+      "styles": []
+    },
+    {
+      "name": "jewel \\(the black canvas\\)",
+      "styles": []
+    },
+    {
+      "name": "suerte",
+      "styles": []
+    },
+    {
+      "name": "kamu \\(kamuuei\\)",
+      "styles": []
+    },
+    {
+      "name": "takeshima eku",
+      "styles": [
+        "轻百合萌系",
+        "水粉手绘感",
+        "糖果暖色调",
+        "治愈恋爱",
+        "yuri style",
+        "pastel colors",
+        "romantic vibe"
+      ]
+    },
+    {
+      "name": "ytoy",
+      "styles": []
+    },
+    {
+      "name": "yamamoto \\(ymmt is sexy\\)",
+      "styles": []
+    },
+    {
+      "name": "mine \\(wizard\\)",
+      "styles": []
+    },
+    {
+      "name": "midori foo",
+      "styles": []
+    },
+    {
+      "name": "tsurui",
+      "styles": []
+    },
+    {
+      "name": "omoti \\(1201208\\)",
+      "styles": []
+    },
+    {
+      "name": "gurami \\(zangizarang\\)",
+      "styles": []
+    },
+    {
+      "name": "giga-tera",
+      "styles": []
+    },
+    {
+      "name": "asahina hikage",
+      "styles": []
+    },
+    {
+      "name": "yongsadragon",
+      "styles": []
+    },
+    {
+      "name": "gaothun",
+      "styles": []
+    },
+    {
+      "name": "weee (raemz)",
+      "styles": []
+    },
+    {
+      "name": "deadnooodles",
+      "styles": []
+    },
+    {
+      "name": "abbb",
+      "styles": []
+    },
+    {
+      "name": "kanzarin",
+      "styles": []
+    },
+    {
+      "name": "piratescat01",
+      "styles": []
+    },
+    {
+      "name": "kiek qaq",
+      "styles": []
+    },
+    {
+      "name": "bafangyu",
+      "styles": []
+    },
+    {
+      "name": "mako \\(makoda\\)",
+      "styles": []
+    },
+    {
+      "name": "kook",
+      "styles": []
+    },
+    {
+      "name": "shellvi",
+      "styles": []
+    },
+    {
+      "name": "meme50",
+      "styles": []
+    },
+    {
+      "name": "pro-p",
+      "styles": []
+    },
+    {
+      "name": "kaede \\(sayappa\\)",
+      "styles": []
+    },
+    {
+      "name": "muyoshito",
+      "styles": []
+    },
+    {
+      "name": "danimaru",
+      "styles": []
+    },
+    {
+      "name": "takenoko no you",
+      "styles": []
+    },
+    {
+      "name": "tenchisouha",
+      "styles": []
+    },
+    {
+      "name": "hero neisan",
+      "styles": []
+    },
+    {
+      "name": "pija \\(pianiishimo\\)",
+      "styles": [
+        "高品质厚涂",
+        "原创角色",
+        "精巧服饰",
+        "珠光肤质",
+        "商业级完成度",
+        "丰富层次",
+        "premium thick painting",
+        "original character",
+        "intricate outfit",
+        "pearlescent skin",
+        "commercial grade",
+        "rich layering"
+      ]
+    },
+    {
+      "name": "misaka 12003-gou",
+      "styles": []
+    },
+    {
+      "name": "betabeet",
+      "styles": []
+    },
+    {
+      "name": "luren max",
+      "styles": []
+    },
+    {
+      "name": "pottsness",
+      "styles": []
+    },
+    {
+      "name": "waa153",
+      "styles": []
+    },
+    {
+      "name": "nomalman",
+      "styles": []
+    },
+    {
+      "name": "dotthebot",
+      "styles": []
+    },
+    {
+      "name": "qiandaiyiyu",
+      "styles": [
+        "通透清新",
+        "文艺气质",
+        "丝滑过渡",
+        "精致五官",
+        "飘逸发丝",
+        "柔和半厚涂",
+        "transparent fresh",
+        "artistic vibe",
+        "smooth transitions",
+        "delicate features",
+        "flowing hair",
+        "soft semi-painterly"
+      ]
+    },
+    {
+      "name": "furaido potato",
+      "styles": []
+    },
+    {
+      "name": "kantan",
+      "styles": []
+    },
+    {
+      "name": "tamada heijun",
+      "styles": []
+    },
+    {
+      "name": "noel \\(nnoelllll\\)",
+      "styles": []
+    },
+    {
+      "name": "mihan \\(mihan art\\)",
+      "styles": []
+    },
+    {
+      "name": "happoubi jin",
+      "styles": [
+        "经典Galgame",
+        "赛璐珞厚涂",
+        "肉感丰满",
+        "复古日系",
+        "classic galgame",
+        "chuby flesh",
+        "90s/00s retro anime"
+      ]
+    },
+    {
+      "name": "nia \\(nia4294\\)",
+      "styles": []
+    },
+    {
+      "name": "tonka kryga",
+      "styles": []
+    },
+    {
+      "name": "kawakami rokkaku",
+      "styles": [
+        "轻柔水彩",
+        "温暖色调",
+        "手绘纹理",
+        "日常温馨",
+        "治愈系",
+        "自然笔触",
+        "gentle watercolor",
+        "warm tones",
+        "hand-drawn texture",
+        "cozy daily life",
+        "healing style",
+        "natural brush strokes"
+      ]
+    },
+    {
+      "name": "ipuu \\(el-ane koubou\\)",
+      "styles": []
+    },
+    {
+      "name": "tonko from",
+      "styles": []
+    },
+    {
+      "name": "puripuri jet",
+      "styles": []
+    },
+    {
+      "name": "nironiro",
+      "styles": []
+    },
+    {
+      "name": "shiokonbu",
+      "styles": []
+    },
+    {
+      "name": "momisan",
+      "styles": []
+    },
+    {
+      "name": "aoi sakura \\(seak5545\\)",
+      "styles": []
+    },
+    {
+      "name": "hizuki akira",
+      "styles": []
+    },
+    {
+      "name": "krirk",
+      "styles": []
+    },
+    {
+      "name": "ursica",
+      "styles": []
+    },
+    {
+      "name": "waa153",
+      "styles": []
+    },
+    {
+      "name": "merrytail",
+      "styles": []
+    },
+    {
+      "name": "tamada heijun",
+      "styles": []
+    },
+    {
+      "name": "rossy \\(yowayowachimpo\\)",
+      "styles": []
+    },
+    {
+      "name": "iisan \\(zvemsv420vuqzzb\\)",
+      "styles": []
+    },
+    {
+      "name": "shhilee",
+      "styles": []
+    },
+    {
+      "name": "von.franken",
+      "styles": []
+    },
+    {
+      "name": "tsuki no i-min",
+      "styles": []
+    },
+    {
+      "name": "amano don",
+      "styles": []
+    },
+    {
+      "name": "xiaoluo xl",
+      "styles": []
+    },
+    {
+      "name": "kase daiki",
+      "styles": []
+    },
+    {
+      "name": "beeeeen",
+      "styles": []
+    },
+    {
+      "name": "zutta",
+      "styles": []
+    },
+    {
+      "name": "jg&solin",
+      "styles": []
+    },
+    {
+      "name": "by spoon",
+      "styles": []
+    },
+    {
+      "name": "poper \\(arin sel\\)",
+      "styles": []
+    },
+    {
+      "name": "nanoda002 \\(saber427\\)",
+      "styles": []
+    },
+    {
+      "name": "remu \\(kirieroido\\)",
+      "styles": []
+    },
+    {
+      "name": "fangxiang cuoluan",
+      "styles": []
+    },
+    {
+      "name": "aji \\(sakanaaj1\\)",
+      "styles": []
+    },
+    {
+      "name": "playerz",
+      "styles": []
+    },
+    {
+      "name": "oldsickkim",
+      "styles": []
+    },
+    {
+      "name": "naidong",
+      "styles": []
+    },
+    {
+      "name": "snowball22",
+      "styles": []
+    },
+    {
+      "name": "shengtian",
+      "styles": []
+    },
+    {
+      "name": "dishwasher1910",
+      "styles": [
+        "概念艺术",
+        "半写实厚涂",
+        "强烈明暗",
+        "未来战斗风",
+        "装甲细节",
+        "氛围光影",
+        "concept art",
+        "semi-realistic painting",
+        "strong contrast",
+        "futuristic combat",
+        "armor details",
+        "atmospheric lighting"
+      ]
+    },
+    {
+      "name": "artist:sky-freedom",
+      "styles": []
+    },
+    {
+      "name": "moursho",
+      "styles": []
+    },
+    {
+      "name": "neige \\(pixiv6850453\\)",
+      "styles": []
+    },
+    {
+      "name": "rgm89s",
+      "styles": []
+    },
+    {
+      "name": "almualim",
+      "styles": []
+    },
+    {
+      "name": "banana oekaki",
+      "styles": []
+    },
+    {
+      "name": "ishimiso \\(ishimura\\)",
+      "styles": []
+    },
+    {
+      "name": "gonster",
+      "styles": []
+    },
+    {
+      "name": "cenangam",
+      "styles": [
+        "干净平涂",
+        "规整线条",
+        "现代配色",
+        "简洁时尚",
+        "二分光影",
+        "极高整洁度",
+        "clean flat color",
+        "neat lines",
+        "modern palette",
+        "minimalist fashion",
+        "two-tone shadow",
+        "high cleanliness"
+      ]
+    },
+    {
+      "name": "rourou \\(been\\)",
+      "styles": []
+    },
+    {
+      "name": "yabby",
+      "styles": []
+    },
+    {
+      "name": "ghosty \\(xiaobai\\)",
+      "styles": []
+    },
+    {
+      "name": "akusema",
+      "styles": []
+    },
+    {
+      "name": "tenako \\(mugu77\\)",
+      "styles": []
+    },
+    {
+      "name": "picter",
+      "styles": []
+    },
+    {
+      "name": "gomi \\(hakumaiteacher\\)",
+      "styles": []
+    },
+    {
+      "name": "bukatsu \\(clubactivity\\)",
+      "styles": []
+    },
+    {
+      "name": "blue gk",
+      "styles": []
+    },
+    {
+      "name": "ruhee",
+      "styles": []
+    },
+    {
+      "name": "ganet p",
+      "styles": []
+    },
+    {
+      "name": "samart",
+      "styles": []
+    },
+    {
+      "name": "mua \\(mua pb\\)",
+      "styles": []
+    },
+    {
+      "name": "dellie",
+      "styles": []
+    },
+    {
+      "name": "cuboon",
+      "styles": [
+        "漆皮反光",
+        "极致丰满",
+        "紧身衣",
+        "高对比厚涂",
+        "亮面皮革",
+        "肉感张力",
+        "glossy latex",
+        "voluptuous body",
+        "high contrast",
+        "shiny skin"
+      ]
+    },
+    {
+      "name": "perfellcsaiko",
+      "styles": []
+    },
+    {
+      "name": "housou-kun",
+      "styles": []
+    },
+    {
+      "name": "9is",
+      "styles": []
+    },
+    {
+      "name": "slush5244",
+      "styles": []
+    },
+    {
+      "name": "tomiokasena",
+      "styles": [
+        "梦幻粒子",
+        "透明萌系",
+        "泡泡高光",
+        "空灵大眼",
+        "少女心",
+        "清亮色彩",
+        "sparkling particles",
+        "dreamy moe",
+        "bubbles",
+        "ethereal eyes"
+      ]
+    },
+    {
+      "name": "daroon5",
+      "styles": []
+    },
+    {
+      "name": "houtengeki",
+      "styles": [
+        "高能量动态",
+        "爆发力构图",
+        "硬朗线条",
+        "高饱和色彩",
+        "动作场景",
+        "视觉冲击",
+        "high energy dynamic",
+        "explosive composition",
+        "bold lines",
+        "saturated colors",
+        "action scene",
+        "visual impact"
+      ]
+    },
+    {
+      "name": "moisture \\(chichi\\)",
+      "styles": [
+        "油润皮肤",
+        "弹性软肉",
+        "丰腴胴体",
+        "水光高亮",
+        "挤压肉感",
+        "湿润反光",
+        "oily skin",
+        "soft flesh",
+        "glossy highlights",
+        "plump body"
+      ]
+    },
+    {
+      "name": "smewed",
+      "styles": []
+    },
+    {
+      "name": "nakamura rohane",
+      "styles": []
+    },
+    {
+      "name": "owner1657",
+      "styles": []
+    },
+    {
+      "name": "raskasar",
+      "styles": [
+        "怪兽装甲",
+        "硬核厚涂",
+        "生物外骨骼",
+        "机械重甲",
+        "狂野设计",
+        "暗黑性感",
+        "monster armor",
+        "hardcore painting",
+        "bio exoskeleton",
+        "mechanical heavy armor"
+      ]
+    },
+    {
+      "name": "hella p",
+      "styles": [
+        "华丽幻想",
+        "浓郁色彩",
+        "戏剧光影",
+        "哥特奇幻",
+        "华美氛围",
+        "精致背景",
+        "luxurious fantasy",
+        "rich colors",
+        "dramatic lighting",
+        "gothic fantasy",
+        "gorgeous atmosphere",
+        "detailed background"
+      ]
+    },
+    {
+      "name": "roropull",
+      "styles": []
+    },
+    {
+      "name": "poch4n",
+      "styles": []
+    },
+    {
+      "name": "tantanmen72",
+      "styles": []
+    },
+    {
+      "name": "noa \\(skae3323\\)",
+      "styles": []
+    },
+    {
+      "name": "kouya toufu",
+      "styles": []
+    },
+    {
+      "name": "nikuatsu magician shinbo",
+      "styles": []
+    },
+    {
+      "name": "coffeelove68",
+      "styles": []
+    },
+    {
+      "name": "momonosuke \\(u-ma991028\\)",
+      "styles": []
+    },
+    {
+      "name": "rirua \\(kjom802\\)",
+      "styles": []
+    },
+    {
+      "name": "cervina7",
+      "styles": []
+    },
+    {
+      "name": "urec",
+      "styles": []
+    },
+    {
+      "name": "toma \\(toma50\\)",
+      "styles": []
+    },
+    {
+      "name": "manzai sugar",
+      "styles": []
+    },
+    {
+      "name": "das \\(dan dan\\)",
+      "styles": []
+    },
+    {
+      "name": "ebifurya",
+      "styles": []
+    },
+    {
+      "name": "rong hui",
+      "styles": []
+    },
+    {
+      "name": "aora",
+      "styles": []
+    },
+    {
+      "name": "kkam-sang",
+      "styles": []
+    },
+    {
+      "name": "dantes ward",
+      "styles": []
+    },
+    {
+      "name": "ricochet-gou",
+      "styles": []
+    },
+    {
+      "name": "ultrabinou",
+      "styles": []
+    },
+    {
+      "name": "cle masahiro",
+      "styles": []
+    },
+    {
+      "name": "sakazuki sudama",
+      "styles": []
+    },
+    {
+      "name": "damda",
+      "styles": [
+        "硬派战斗",
+        "粗犷笔触",
+        "暗沉色调",
+        "爆发力姿态",
+        "冷暖对比",
+        "战斗瞬间",
+        "hardcore battle",
+        "rough brush strokes",
+        "dark tones",
+        "explosive poses",
+        "cool-warm contrast",
+        "combat moment"
+      ]
+    },
+    {
+      "name": "sei shoujo",
+      "styles": [
+        "经典成人",
+        "饱满线条",
+        "鲜艳色彩",
+        "诱惑角色",
+        "光泽肌肤",
+        "暖色调",
+        "classic adult illustration",
+        "full lines",
+        "vivid colors",
+        "seductive character",
+        "glossy skin",
+        "warm tones"
+      ]
+    },
+    {
+      "name": "kawai \\(purplrpouni\\)",
+      "styles": [
+        "甜美萌系",
+        "水润大眼",
+        "粉嫩红晕",
+        "柔和色调",
+        "纤细线条",
+        "少女甜美",
+        "sweet moe",
+        "dewy big eyes",
+        "pink blush",
+        "soft tones",
+        "thin lines",
+        "girly sweet"
+      ]
+    },
+    {
+      "name": "j adsen",
+      "styles": []
+    },
+    {
+      "name": "shibao aoyama",
+      "styles": []
+    },
+    {
+      "name": "bilibili xiaolu",
+      "styles": []
+    },
+    {
+      "name": "z3zz4",
+      "styles": [
+        "现代同人",
+        "干净线稿",
+        "赛璐珞",
+        "高对比明暗",
+        "clean linework",
+        "cell shading",
+        "vibrant contrast"
+      ]
+    },
+    {
+      "name": "neco",
+      "styles": [
+        "机械重装姬",
+        "冷淡高级灰",
+        "机械外骨骼",
+        "科幻机娘",
+        "哑光装甲",
+        "无表情",
+        "mechanical exoskeleton",
+        "muted colors",
+        "katana",
+        "emotionless expression"
+      ]
+    },
+    {
+      "name": "yoneyama mai",
+      "styles": [
+        "棱镜反光",
+        "超现实插画",
+        "碎片折射",
+        "色差光晕",
+        "动态流向线",
+        "几何光斑",
+        "prism reflections",
+        "chromatic aberration",
+        "geometric shards",
+        "dynamic movement"
+      ]
+    },
+    {
+      "name": "rolua",
+      "styles": [
+        "街头潮流",
+        "忧郁情绪",
+        "灰调色彩",
+        "都市少女",
+        "雨后街景",
+        "现代服饰",
+        "street fashion",
+        "melancholic mood",
+        "muted palette",
+        "urban girl"
+      ]
+    },
+    {
+      "name": "reoen",
+      "styles": [
+        "赛博暗黑",
+        "黑白红配色",
+        "锋利线条",
+        "冷酷视觉",
+        "前卫赛璐珞",
+        "刀割边缘",
+        "cyber dark",
+        "black white red",
+        "sharp lineart",
+        "cool cel shading"
+      ]
+    },
+    {
+      "name": "watao",
+      "styles": []
+    },
+    {
+      "name": "novelance",
+      "styles": []
+    },
+    {
+      "name": "r1zen",
+      "styles": []
+    },
+    {
+      "name": "swav",
+      "styles": [
+        "现代机能",
+        "硬朗概念",
+        "科技配件",
+        "锐利边缘",
+        "机能服饰",
+        "冷酷设计",
+        "techwear",
+        "hard surface",
+        "sharp edges",
+        "modern concept design"
+      ]
+    },
+    {
+      "name": "bigroll",
+      "styles": []
+    },
+    {
+      "name": "roitz \\( roitz \\)",
+      "styles": []
+    },
+    {
+      "name": "au \\(d elete\\)",
+      "styles": []
+    },
+    {
+      "name": "archlich",
+      "styles": []
+    },
+    {
+      "name": "solipsist",
+      "styles": []
+    },
+    {
+      "name": "mika pikazo",
+      "styles": [
+        "爆裂高饱和",
+        "五彩撞色",
+        "赛博潮流",
+        "繁复色彩",
+        "活力插画",
+        "霓虹波普",
+        "vivid colors",
+        "colorful pop",
+        "cyber fashion",
+        "energetic illustration"
+      ]
+    },
+    {
+      "name": "arlizi",
+      "styles": []
+    },
+    {
+      "name": "kurikabacha",
+      "styles": []
+    },
+    {
+      "name": "onono imoko",
+      "styles": []
+    },
+    {
+      "name": "wanke",
+      "styles": []
+    },
+    {
+      "name": "rsef",
+      "styles": []
+    },
+    {
+      "name": "sho \\(sho lwlw\\)",
+      "styles": []
+    },
+    {
+      "name": "miv4t",
+      "styles": [
+        "极光折射",
+        "流光空间",
+        "几何光斑",
+        "玻璃折射",
+        "魔幻透视",
+        "动态光轨",
+        "aurora light",
+        "glass refraction",
+        "geometric sparkles",
+        "flowing lights"
+      ]
+    },
+    {
+      "name": "john kafka",
+      "styles": []
+    },
+    {
+      "name": "quasarcake",
+      "styles": [
+        "半写实动画",
+        "高级反光",
+        "利落线稿",
+        "现代服饰",
+        "semi-realistic anime",
+        "metallic luster",
+        "cool aesthetic"
+      ]
+    },
+    {
+      "name": "zhili xingzou",
+      "styles": []
+    },
+    {
+      "name": "pvc parfait",
+      "styles": []
+    },
+    {
+      "name": "freng",
+      "styles": []
+    },
+    {
+      "name": "96yottea",
+      "styles": []
+    },
+    {
+      "name": "ttk \\(kirinottk\\)",
+      "styles": []
+    },
+    {
+      "name": "yue \\(memento1113\\)",
+      "styles": []
+    },
+    {
+      "name": "lanzi \\(415460661\\)",
+      "styles": []
+    },
+    {
+      "name": "mochizuki kei",
+      "styles": [
+        "高张力平涂",
+        "黑白大块面",
+        "下三白眼",
+        "叛逆情绪",
+        "图形化阴影",
+        "前卫配色",
+        "high-contrast graphic",
+        "sanpaku eyes",
+        "rebellious attitude",
+        "bold shapes"
+      ]
+    },
+    {
+      "name": "kousaki rui",
+      "styles": []
+    },
+    {
+      "name": "xuedaixun",
+      "styles": []
+    },
+    {
+      "name": "pikuson",
+      "styles": []
+    },
+    {
+      "name": "orie h",
+      "styles": []
+    },
+    {
+      "name": "gemi ningen",
+      "styles": []
+    },
+    {
+      "name": "wataboku",
+      "styles": []
+    },
+    {
+      "name": "murata range",
+      "styles": [
+        "复古工业",
+        "蒸汽朋克",
+        "皮革质感",
+        "童颜少女",
+        "飞行帽",
+        "机械配件",
+        "retro industrial",
+        "steampunk",
+        "leather texture",
+        "mechanical accessories"
+      ]
+    },
+    {
+      "name": "lam \\(ramdayo\\)",
+      "styles": [
+        "高饱和波普",
+        "霓虹瞳孔",
+        "硬边阴影",
+        "前卫街头",
+        "强对比配色",
+        "张扬眼妆",
+        "neon eyes",
+        "high-contrast shading",
+        "avant-garde streetwear",
+        "pop art"
+      ]
+    },
+    {
+      "name": "toi8",
+      "styles": []
+    },
+    {
+      "name": "iwamoto zerogo",
+      "styles": []
+    },
+    {
+      "name": "charin",
+      "styles": [
+        "现代清爽",
+        "巧妙色块",
+        "时尚造型",
+        "干净线条",
+        "简洁光影",
+        "高辨识度",
+        "modern fresh",
+        "clever color blocks",
+        "fashionable design",
+        "clean lines",
+        "simple shading",
+        "high recognition"
+      ]
+    },
+    {
+      "name": "temu \\(temp mumu\\)",
+      "styles": []
+    },
+    {
+      "name": "newo \\(shinra-p\\)",
+      "styles": [
+        "幻想华丽",
+        "绚烂色彩",
+        "精致光效",
+        "RPG风格",
+        "瑰丽氛围",
+        "壮观背景",
+        "fantasy gorgeous",
+        "dazzling colors",
+        "refined light effects",
+        "RPG style",
+        "magnificent atmosphere",
+        "spectacular background"
+      ]
+    },
+    {
+      "name": "bukurote",
+      "styles": []
+    },
+    {
+      "name": "kagari liroi",
+      "styles": []
+    },
+    {
+      "name": "momomo \\(m0 3\\)",
+      "styles": []
+    },
+    {
+      "name": "shokikanes",
+      "styles": [
+        "冷淡街头",
+        "机能潮流",
+        "鸭舌帽口罩",
+        "利落明暗",
+        "斜刘海",
+        "硬朗少女",
+        "street techwear",
+        "cap and mask",
+        "sharp shading",
+        "cool girl"
+      ]
+    },
+    {
+      "name": "cogecha",
+      "styles": [
+        "复古颗粒",
+        "斜向排线",
+        "沉稳色彩",
+        "故事感",
+        "艺术插画",
+        "大明暗",
+        "retro grain",
+        "diagonal hatching",
+        "muted colors",
+        "narrative mood"
+      ]
+    },
+    {
+      "name": "lingear",
+      "styles": []
+    },
+    {
+      "name": "taiki \\(luster\\)",
+      "styles": []
+    },
+    {
+      "name": "ikusy",
+      "styles": []
+    },
+    {
+      "name": "tsubonari",
+      "styles": []
+    },
+    {
+      "name": "andaerz",
+      "styles": []
+    },
+    {
+      "name": "taku artworks",
+      "styles": []
+    },
+    {
+      "name": "minaba hideo",
+      "styles": []
+    },
+    {
+      "name": "yoshida akihiko",
+      "styles": []
+    },
+    {
+      "name": "lm7 \\(op-center\\)",
+      "styles": [
+        "末日机械",
+        "晦暗神圣",
+        "废土微光",
+        "空灵悲壮",
+        "神圣机械",
+        "暗色幻想",
+        "post-apocalyptic",
+        "sacred machinery",
+        "dim wasteland",
+        "ethereal sorrow"
+      ]
+    },
+    {
+      "name": "han-0v0",
+      "styles": []
+    },
+    {
+      "name": "infukun",
+      "styles": [
+        "温柔软萌",
+        "柔和粉色",
+        "温润光影",
+        "含羞表情",
+        "柔软体态",
+        "甜蜜氛围",
+        "gentle soft moe",
+        "soft pink tones",
+        "warm shading",
+        "shy expression",
+        "soft body",
+        "sweet atmosphere"
+      ]
+    },
+    {
+      "name": "norizc",
+      "styles": []
+    },
+    {
+      "name": "skade",
+      "styles": [
+        "冷面英伦",
+        "多层服饰",
+        "风衣马甲",
+        "知性高冷",
+        "明日方舟风",
+        "精致裁剪",
+        "british fashion",
+        "layered clothing",
+        "trench coat",
+        "cool elegance"
+      ]
+    },
+    {
+      "name": "yyb",
+      "styles": []
+    },
+    {
+      "name": "ryuuzaki ichi",
+      "styles": []
+    },
+    {
+      "name": "xiayehongming",
+      "styles": []
+    },
+    {
+      "name": "huanxiang heitu",
+      "styles": [
+        "轻奢潮牌",
+        "现代插画",
+        "亮丽通透",
+        "时尚裁剪",
+        "企鹅物流感",
+        "都市机能",
+        "luxury streetwear",
+        "bright colors",
+        "fashion design",
+        "modern anime"
+      ]
+    },
+    {
+      "name": "pipidan",
+      "styles": []
+    },
+    {
+      "name": "lin+",
+      "styles": []
+    },
+    {
+      "name": "anmi",
+      "styles": [
+        "果冻肌肤",
+        "高明度萌系",
+        "水润少女",
+        "透明白裙",
+        "夏日反光",
+        "清透色彩",
+        "jelly skin",
+        "vibrant moe",
+        "transparent dress",
+        "water reflections"
+      ]
+    },
+    {
+      "name": "ask \\(askzy\\)",
+      "styles": [
+        "圣洁厚涂",
+        "陶瓷肌肤",
+        "高贵冷光",
+        "丝绸发丝",
+        "幻想长裙",
+        "剔透光影",
+        "porcelain skin",
+        "sacred white lighting",
+        "flowing silk",
+        "elegant poise"
+      ]
+    },
+    {
+      "name": "kyo zip",
+      "styles": []
+    },
+    {
+      "name": "liduke",
+      "styles": [
+        "精细重装",
+        "机能服饰",
+        "工业设计",
+        "明日方舟感",
+        "复杂装备",
+        "概念厚涂",
+        "detailed armor",
+        "techwear",
+        "industrial design",
+        "concept art"
+      ]
+    },
+    {
+      "name": "wada arco",
+      "styles": [
+        "华丽奇幻",
+        "Q弹人体",
+        "型月风",
+        "生动表情",
+        "夸张俏皮",
+        "高张力同人",
+        "fantasy colors",
+        "expressive face",
+        "type-moon style",
+        "playful anatomy"
+      ]
+    },
+    {
+      "name": "takeuchi takashi",
+      "styles": [
+        "型月正统",
+        "武内脸",
+        "干净硬边",
+        "长剑铠甲",
+        "经典月姬",
+        "骑士少女",
+        "type-moon classic",
+        "takeuchi face",
+        "clean edges",
+        "saber armor"
+      ]
+    },
+    {
+      "name": "9ml",
+      "styles": []
+    },
+    {
+      "name": "yutokamizu",
+      "styles": []
+    },
+    {
+      "name": "jacknife",
+      "styles": []
+    },
+    {
+      "name": "so-bin",
+      "styles": [
+        "黑暗幻想",
+        "狂野色块",
+        "厚重颗粒",
+        "混沌厚涂",
+        "魔幻反派",
+        "印象派笔触",
+        "dark fantasy",
+        "wild brushwork",
+        "painterly blocks",
+        "gritty texture"
+      ]
+    },
+    {
+      "name": "yunsang",
+      "styles": [
+        "韩式精致",
+        "细腻光滑",
+        "清冷优雅",
+        "高对比度",
+        "商业品质",
+        "气质美少女",
+        "korean refined",
+        "smooth polished",
+        "cool elegance",
+        "high contrast",
+        "commercial quality",
+        "elegant beauty"
+      ]
+    },
+    {
+      "name": "taesi",
+      "styles": []
+    },
+    {
+      "name": "kim hyung tae",
+      "styles": []
+    },
+    {
+      "name": "mx2j \\(nsh6394\\)",
+      "styles": []
+    },
+    {
+      "name": "tunamayo \\(dsasd751\\)",
+      "styles": [
+        "清爽微性感",
+        "现代赛璐珞",
+        "流畅线条",
+        "日常居家",
+        "高弹常服",
+        "清秀肉体",
+        "clean cel shading",
+        "casual sensuality",
+        "smooth curves",
+        "modern anime"
+      ]
+    },
+    {
+      "name": "hyulla",
+      "styles": []
+    },
+    {
+      "name": "yasuda akira",
+      "styles": []
+    },
+    {
+      "name": "kakiman",
+      "styles": []
+    },
+    {
+      "name": "pinkmill",
+      "styles": []
+    },
+    {
+      "name": "starshadowmagician",
+      "styles": [
+        "梦幻星空",
+        "蓝紫色系",
+        "星光粒子",
+        "空灵神秘",
+        "浪漫太空",
+        "诗意美学",
+        "dreamy starlight",
+        "blue-purple palette",
+        "star particles",
+        "ethereal mysterious",
+        "romantic space",
+        "poetic aesthetic"
+      ]
+    },
+    {
+      "name": "koyama hirokazu",
+      "styles": []
+    },
+    {
+      "name": "matsuura kento",
+      "styles": []
+    },
+    {
+      "name": "junny",
+      "styles": []
+    },
+    {
+      "name": "veksoo",
+      "styles": []
+    },
+    {
+      "name": "dore \\(gilles dore\\)",
+      "styles": [
+        "古典铜版画",
+        "精细排线",
+        "明暗对照",
+        "史诗复古",
+        "chiaroscuro",
+        "etching print style",
+        "classical sketch",
+        "baroque"
+      ]
+    },
+    {
+      "name": "goddess of victory: nikke",
+      "styles": [
+        "高精度CG",
+        "韩式商业",
+        "战术性感",
+        "Live2D活力",
+        "细腻肌肤",
+        "多样配色",
+        "high fidelity CG",
+        "korean commercial",
+        "tactical sexy",
+        "Live2D vitality",
+        "detailed skin",
+        "diverse palette"
+      ]
+    },
+    {
+      "name": "arknights",
+      "styles": []
+    },
+    {
+      "name": "blue archive",
+      "styles": []
+    },
+    {
+      "name": "reverse:1999",
+      "styles": [
+        "复古超现实",
+        "文艺灰调",
+        "杂志级高级感",
+        "历史象征",
+        "半写实比例",
+        "神秘优雅",
+        "retro surrealism",
+        "muted artistic tones",
+        "magazine premium",
+        "historical symbolism",
+        "semi-realistic proportions",
+        "mysterious elegance"
+      ]
+    },
+    {
+      "name": "genshin impact",
+      "styles": []
+    },
+    {
+      "name": "path to nowhere",
+      "styles": [
+        "暗黑废土美学",
+        "厚涂大色块",
+        "冷暖强对比",
+        "颓废张力",
+        "dark gritty aesthetic",
+        "painterly style",
+        "high dynamic lighting"
+      ]
+    },
+    {
+      "name": "alchemy stars",
+      "styles": []
+    },
+    {
+      "name": "mikoyan",
+      "styles": []
+    },
+    {
+      "name": "chinbotsu",
+      "styles": []
+    },
+    {
+      "name": "daisy mitsumata",
+      "styles": []
+    },
+    {
+      "name": "norza",
+      "styles": []
+    },
+    {
+      "name": "minishell",
+      "styles": []
+    },
+    {
+      "name": "aya shobon",
+      "styles": []
+    },
+    {
+      "name": "ireading",
+      "styles": []
+    },
+    {
+      "name": "sulcate",
+      "styles": []
+    },
+    {
+      "name": "streachybear",
+      "styles": []
+    },
+    {
+      "name": "mizuumi \\(bb\\)",
+      "styles": []
+    },
+    {
+      "name": "m k",
+      "styles": []
+    },
+    {
+      "name": "hitobashira \\(1746164306\\)",
+      "styles": []
+    },
+    {
+      "name": "mirin chikuwa",
+      "styles": []
+    },
+    {
+      "name": "xiangzi box",
+      "styles": []
+    },
+    {
+      "name": "kusonikumarukun",
+      "styles": []
+    },
+    {
+      "name": "fellatrix",
+      "styles": []
+    },
+    {
+      "name": "horie ryuu",
+      "styles": []
+    },
+    {
+      "name": "shiratama \\(monster1553\\)",
+      "styles": [
+        "甜美萝莉",
+        "棉花糖萌系",
+        "蓬松发丝",
+        "嫩粉色彩",
+        "幼态比例",
+        "软萌眼神",
+        "sweet moe",
+        "fluffy hair",
+        "pastel pink",
+        "soft eyes"
+      ]
+    },
+    {
+      "name": "madkaiser",
+      "styles": []
+    },
+    {
+      "name": "2n5",
+      "styles": []
+    },
+    {
+      "name": "ain \\(in\\)",
+      "styles": []
+    },
+    {
+      "name": "uno makoto",
+      "styles": []
+    },
+    {
+      "name": "tokimachi eisei",
+      "styles": []
+    },
+    {
+      "name": "kawakami masaki",
+      "styles": []
+    },
+    {
+      "name": "sabakan oekaki",
+      "styles": []
+    },
+    {
+      "name": "picco",
+      "styles": []
+    },
+    {
+      "name": "frogzone art",
+      "styles": []
+    },
+    {
+      "name": "yana \\(nekoarashi\\)",
+      "styles": []
+    },
+    {
+      "name": "toriyarou",
+      "styles": []
+    },
+    {
+      "name": "morino bambi",
+      "styles": []
+    },
+    {
+      "name": "emanonta",
+      "styles": []
+    },
+    {
+      "name": "nayoshi \\(r-744\\)",
+      "styles": []
+    },
+    {
+      "name": "samsara \\(shuukeura\\)",
+      "styles": []
+    },
+    {
+      "name": "red-rum",
+      "styles": []
+    },
+    {
+      "name": "wokada",
+      "styles": []
+    },
+    {
+      "name": "momo no suidou-sui",
+      "styles": []
+    },
+    {
+      "name": "aimaitei umami",
+      "styles": []
+    },
+    {
+      "name": "bosshi",
+      "styles": []
+    },
+    {
+      "name": "mdf an",
+      "styles": []
+    },
+    {
+      "name": "sleepy frippy",
+      "styles": []
+    },
+    {
+      "name": "nicchi",
+      "styles": []
+    },
+    {
+      "name": "ikemeru19",
+      "styles": []
+    },
+    {
+      "name": "euvooo",
+      "styles": []
+    },
+    {
+      "name": "nawakena",
+      "styles": [
+        "半厚涂",
+        "温润色彩",
+        "精致五官",
+        "柔和光影",
+        "圆润线条",
+        "温柔系",
+        "semi-painterly",
+        "warm color palette",
+        "delicate facial features",
+        "soft shading",
+        "smooth lines",
+        "gentle aesthetic"
+      ]
+    },
+    {
+      "name": "toho10min",
+      "styles": []
+    },
+    {
+      "name": "aizawa marimo",
+      "styles": []
+    },
+    {
+      "name": "ibuo \\(ibukht1015\\)",
+      "styles": []
+    },
+    {
+      "name": "boingoo",
+      "styles": []
+    },
+    {
+      "name": "natedecock",
+      "styles": []
+    },
+    {
+      "name": "nuezou",
+      "styles": []
+    },
+    {
+      "name": "melon22",
+      "styles": [
+        "丰润肉感",
+        "微胖体态",
+        "日常服饰",
+        "软肉挤压",
+        "弹性身体",
+        "多肉少女",
+        "chubby body",
+        "soft curves",
+        "casual clothing",
+        "plump anatomy"
+      ]
+    },
+    {
+      "name": "cyberboi",
+      "styles": []
+    },
+    {
+      "name": "jujunaught",
+      "styles": []
+    },
+    {
+      "name": "bowalia",
+      "styles": [
+        "韩式半厚涂",
+        "清爽休闲",
+        "自然光影",
+        "俏丽五官",
+        "korean webtoon style",
+        "casual outfit",
+        "soft volumetric shading"
+      ]
+    },
+    {
+      "name": "hutago",
+      "styles": []
+    },
+    {
+      "name": "puzenketsu",
+      "styles": []
+    },
+    {
+      "name": "koucha indian",
+      "styles": []
+    },
+    {
+      "name": "drill \\(emilio\\)",
+      "styles": []
+    },
+    {
+      "name": "zinfian",
+      "styles": []
+    },
+    {
+      "name": "yoshio \\(55level\\)",
+      "styles": []
+    },
+    {
+      "name": "ren \\(tainca2000\\)",
+      "styles": []
+    },
+    {
+      "name": "park ongjol",
+      "styles": []
+    },
+    {
+      "name": "got ji \\(gojich1\\)",
+      "styles": []
+    },
+    {
+      "name": "nishiide kengorou",
+      "styles": []
+    },
+    {
+      "name": "kabos",
+      "styles": []
+    },
+    {
+      "name": "takebouzu",
+      "styles": []
+    },
+    {
+      "name": "ogami",
+      "styles": []
+    },
+    {
+      "name": "kugara4423",
+      "styles": []
+    },
+    {
+      "name": "zer0.zer0",
+      "styles": []
+    },
+    {
+      "name": "cham22",
+      "styles": []
+    },
+    {
+      "name": "hakai shin",
+      "styles": []
+    },
+    {
+      "name": "otogi tetsurou",
+      "styles": []
+    },
+    {
+      "name": "metal owl \\(aden12\\)",
+      "styles": []
+    },
+    {
+      "name": "kokonattsu",
+      "styles": []
+    },
+    {
+      "name": "toy \\(wanju\\)",
+      "styles": []
+    },
+    {
+      "name": "ponkotsu \\(robolobo4956\\)",
+      "styles": []
+    },
+    {
+      "name": "throtem",
+      "styles": [
+        "精致商业CG",
+        "清新优雅",
+        "柔和色彩",
+        "干净光影",
+        "手办原案",
+        "流畅线条",
+        "polished commercial CG",
+        "fresh elegant",
+        "soft colors",
+        "clean lighting",
+        "figure original",
+        "smooth lines"
+      ]
+    },
+    {
+      "name": "kesoshirou",
+      "styles": []
+    },
+    {
+      "name": "yd \\(orange maru\\)",
+      "styles": []
+    },
+    {
+      "name": "pepe \\(jonasan\\)",
+      "styles": []
+    },
+    {
+      "name": "yoongonji",
+      "styles": []
+    },
+    {
+      "name": "mad kimo",
+      "styles": []
+    },
+    {
+      "name": "momofuki rio",
+      "styles": []
+    },
+    {
+      "name": "homare \\(fool's art\\)",
+      "styles": [
+        "华丽成人",
+        "精细厚涂",
+        "光泽肤质",
+        "层次光影",
+        "成熟美学",
+        "专业品质",
+        "gorgeous mature",
+        "detailed painting",
+        "glossy skin texture",
+        "layered lighting",
+        "mature aesthetic",
+        "professional quality"
+      ]
+    },
+    {
+      "name": "alios arvin",
+      "styles": [
+        "华丽奇幻",
+        "绚烂色彩",
+        "璀璨光效",
+        "史诗感",
+        "戏剧张力",
+        "壮阔背景",
+        "gorgeous fantasy",
+        "brilliant colors",
+        "dazzling light effects",
+        "epic feel",
+        "dramatic tension",
+        "grand background"
+      ]
+    },
+    {
+      "name": "mogiki hayami",
+      "styles": []
+    },
+    {
+      "name": "fei \\(maidoll\\)",
+      "styles": [
+        "精巧赛璐珞",
+        "女仆风格",
+        "精致蕾丝",
+        "柔和鲜明",
+        "优雅萌美",
+        "Lolita元素",
+        "delicate cel shading",
+        "maid style",
+        "detailed lace",
+        "soft vivid",
+        "elegant cute",
+        "lolita elements"
+      ]
+    },
+    {
+      "name": "oda non",
+      "styles": [
+        "极致丰腴肉感",
+        "高反光油亮肌",
+        "细腻解剖",
+        "明艳情色",
+        "oiled skin",
+        "hyper chubby",
+        "lustrous flesh",
+        "erotic blush"
+      ]
+    },
+    {
+      "name": "rhlatm",
+      "styles": []
+    },
+    {
+      "name": "asa \\(teng zi\\)",
+      "styles": []
+    },
+    {
+      "name": "musashino sekai",
+      "styles": []
+    },
+    {
+      "name": "b.sa \\(bbbs\\)",
+      "styles": []
+    },
+    {
+      "name": "sadakage",
+      "styles": []
+    },
+    {
+      "name": "thirty 8ght",
+      "styles": []
+    },
+    {
+      "name": "tatsunami youtoku",
+      "styles": []
+    },
+    {
+      "name": "kishizuka kenji",
+      "styles": []
+    },
+    {
+      "name": "toten \\(der fuhrer\\)",
+      "styles": []
+    },
+    {
+      "name": "etuzan jakusui",
+      "styles": []
+    },
+    {
+      "name": "hihizaru badass",
+      "styles": []
+    },
+    {
+      "name": "butcha-u",
+      "styles": []
+    },
+    {
+      "name": "mifune seijirou",
+      "styles": []
+    },
+    {
+      "name": "hibren",
+      "styles": []
+    },
+    {
+      "name": "zumi \\(zumidraws\\)",
+      "styles": []
+    },
+    {
+      "name": "sakimichan",
+      "styles": []
+    },
+    {
+      "name": "kidmo",
+      "styles": []
+    },
+    {
+      "name": "milkychu",
+      "styles": []
+    },
+    {
+      "name": "aleriia v",
+      "styles": []
+    },
+    {
+      "name": "sasha khmel",
+      "styles": []
+    },
+    {
+      "name": "saigalisk",
+      "styles": []
+    },
+    {
+      "name": "jeneral",
+      "styles": [
+        "时尚潮流",
+        "前卫配色",
+        "街头穿搭",
+        "干净线条",
+        "现代构图",
+        "都市美学",
+        "trendy fashion",
+        "avant-garde palette",
+        "streetwear",
+        "clean lines",
+        "modern composition",
+        "urban aesthetic"
+      ]
+    },
+    {
+      "name": "serafleur",
+      "styles": []
+    },
+    {
+      "name": "tarakanovich",
+      "styles": []
+    },
+    {
+      "name": "personal ami",
+      "styles": []
+    },
+    {
+      "name": "kolga art",
+      "styles": []
+    },
+    {
+      "name": "virgoart",
+      "styles": []
+    },
+    {
+      "name": "nixeu",
+      "styles": []
+    },
+    {
+      "name": "guweiz",
+      "styles": []
+    },
+    {
+      "name": "axsen",
+      "styles": []
+    },
+    {
+      "name": "monori rogue",
+      "styles": []
+    },
+    {
+      "name": "sciamano240",
+      "styles": []
+    },
+    {
+      "name": "kyu yong eom",
+      "styles": []
+    },
+    {
+      "name": "mystra77",
+      "styles": []
+    },
+    {
+      "name": "wtparadise",
+      "styles": []
+    },
+    {
+      "name": "neoartcore",
+      "styles": []
+    },
+    {
+      "name": "emg \\(christain\\)",
+      "styles": []
+    },
+    {
+      "name": "kittew",
+      "styles": []
+    },
+    {
+      "name": "teemu taiga",
+      "styles": []
+    },
+    {
+      "name": "justsomenoob",
+      "styles": []
+    },
+    {
+      "name": "themaestronoob",
+      "styles": []
+    },
+    {
+      "name": "wei \\(promise 0820\\)",
+      "styles": []
+    },
+    {
+      "name": "xxoom",
+      "styles": []
+    },
+    {
+      "name": "in-hyuk lee",
+      "styles": []
+    },
+    {
+      "name": "izayoi seishin",
+      "styles": [
+        "写实解剖",
+        "饱满肉体",
+        "硬朗线条",
+        "经典成人志",
+        "realistic anatomy",
+        "sensual curves",
+        "mature sensual aesthetic"
+      ]
+    },
+    {
+      "name": "tabe koji",
+      "styles": []
+    },
+    {
+      "name": "cherry-gig",
+      "styles": []
+    },
+    {
+      "name": "sade abyss",
+      "styles": []
+    },
+    {
+      "name": "cirenk",
+      "styles": []
+    },
+    {
+      "name": "stanley lau",
+      "styles": []
+    },
+    {
+      "name": "bekus",
+      "styles": []
+    },
+    {
+      "name": "limgae",
+      "styles": []
+    },
+    {
+      "name": "sabu \\(sabudenego\\)",
+      "styles": []
+    },
+    {
+      "name": "21yc \\(september breeze\\)",
+      "styles": []
+    },
+    {
+      "name": "dima ivanov",
+      "styles": []
+    },
+    {
+      "name": "waymay",
+      "styles": []
+    },
+    {
+      "name": "olchas",
+      "styles": []
+    },
+    {
+      "name": "tsukasa jun",
+      "styles": []
+    },
+    {
+      "name": "furronika",
+      "styles": []
+    },
+    {
+      "name": "misawa hiroshi",
+      "styles": []
+    },
+    {
+      "name": "sangsoo jeong",
+      "styles": []
+    },
+    {
+      "name": "goatwillow",
+      "styles": []
+    },
+    {
+      "name": "watanabe yasuaki",
+      "styles": [
+        "千禧年写实",
+        "OL知性风",
+        "丝袜制服",
+        "光泽质感",
+        "怀旧美学",
+        "精致发丝",
+        "Y2K realistic",
+        "office lady style",
+        "pantyhose formal wear",
+        "glossy texture",
+        "nostalgic aesthetic",
+        "polished hair"
+      ]
+    },
+    {
+      "name": "heo sung-moo",
+      "styles": []
+    },
+    {
+      "name": "artnip",
+      "styles": []
+    },
+    {
+      "name": "healthyman",
+      "styles": []
+    },
+    {
+      "name": "kurenaiz \\(kuayrenaiz\\)",
+      "styles": [
+        "前卫霓虹色彩",
+        "涂鸦厚重感",
+        "硬边缘高光",
+        "潮流街头",
+        "neon aesthetic",
+        "rough cell shading",
+        "street cyberpunk"
+      ]
+    },
+    {
+      "name": "kunaboto",
+      "styles": []
+    },
+    {
+      "name": "difman",
+      "styles": []
+    },
+    {
+      "name": "krekkov",
+      "styles": []
+    },
+    {
+      "name": "gibagiba",
+      "styles": []
+    },
+    {
+      "name": "huangdanlan",
+      "styles": []
+    },
+    {
+      "name": "ebora",
+      "styles": []
+    },
+    {
+      "name": "sashizume soutarou",
+      "styles": []
+    },
+    {
+      "name": "bow \\(bhp\\)",
+      "styles": []
+    },
+    {
+      "name": "bettkan",
+      "styles": []
+    },
+    {
+      "name": "midorino \\(green-happy\\)",
+      "styles": []
+    },
+    {
+      "name": "uuuron cha",
+      "styles": []
+    },
+    {
+      "name": "alp",
+      "styles": []
+    },
+    {
+      "name": "sunna \\(nilsunna\\)",
+      "styles": []
+    },
+    {
+      "name": "bonten",
+      "styles": []
+    },
+    {
+      "name": "oekakizuki",
+      "styles": []
+    },
+    {
+      "name": "jikihatiman",
+      "styles": [
+        "现代精涂",
+        "Fate同人",
+        "精致细节",
+        "鲜明色彩",
+        "干净线条",
+        "动态姿态",
+        "modern fine painting",
+        "Fate fan art",
+        "detailed design",
+        "vivid colors",
+        "clean lines",
+        "dynamic poses"
+      ]
+    },
+    {
+      "name": "kuso otoko",
+      "styles": []
+    },
+    {
+      "name": "e11e",
+      "styles": []
+    },
+    {
+      "name": "nyantcha",
+      "styles": [
+        "个性平涂",
+        "夸张表情",
+        "生动活力",
+        "干净线条",
+        "Q弹比例",
+        "调皮神态",
+        "distinctive flat color",
+        "exaggerated expression",
+        "lively vitality",
+        "clean lines",
+        "bouncy proportions",
+        "playful attitude"
+      ]
+    },
+    {
+      "name": "unluckytobii",
+      "styles": [
+        "美式二次元",
+        "厚重阴影",
+        "健美解剖",
+        "高对比黑影",
+        "扎实人体",
+        "硬朗风格",
+        "american anime",
+        "heavy shadows",
+        "fit anatomy",
+        "bold contrast"
+      ]
+    },
+    {
+      "name": "yanghua gaizi",
+      "styles": []
+    },
+    {
+      "name": "kyo \\(kuroichigo\\)",
+      "styles": []
+    },
+    {
+      "name": "awesomeerix",
+      "styles": []
+    },
+    {
+      "name": "mikuneki",
+      "styles": []
+    },
+    {
+      "name": "roresu",
+      "styles": []
+    },
+    {
+      "name": "mutomorokoshi",
+      "styles": []
+    },
+    {
+      "name": "mmmmmkun",
+      "styles": []
+    },
+    {
+      "name": "chihel",
+      "styles": []
+    },
+    {
+      "name": "lsls",
+      "styles": []
+    },
+    {
+      "name": "rekka",
+      "styles": []
+    },
+    {
+      "name": "orgoglioso banane",
+      "styles": []
+    },
+    {
+      "name": "koyansuee",
+      "styles": []
+    },
+    {
+      "name": "artist:doppel \\(bonnypir\\)",
+      "styles": []
+    },
+    {
+      "name": "xyanaid",
+      "styles": []
+    },
+    {
+      "name": "ratatatat74",
+      "styles": [
+        "爆裂张力",
+        "高弹线条",
+        "夸张腰臀比",
+        "破坏级构图",
+        "刚猛线条",
+        "视觉冲击",
+        "dynamic lineart",
+        "exaggerated curves",
+        "impact pose",
+        "high tension"
+      ]
+    },
+    {
+      "name": "matu gyu",
+      "styles": []
+    },
+    {
+      "name": "clearite",
+      "styles": [
+        "清透晶莹",
+        "干净通透",
+        "明快光影",
+        "清新利落",
+        "水晶纯净",
+        "极高清洁度",
+        "crystal clear",
+        "clean transparent",
+        "bright shading",
+        "fresh crisp",
+        "crystal pure",
+        "ultra-clean"
+      ]
+    },
+    {
+      "name": "gloss \\(hotglossed\\)",
+      "styles": []
+    },
+    {
+      "name": "burustandin",
+      "styles": []
+    },
+    {
+      "name": "deccatezu",
+      "styles": []
+    },
+    {
+      "name": "shinjiro",
+      "styles": [
+        "华丽重装",
+        "浓郁色彩",
+        "金属反光",
+        "战斗史诗",
+        "健美体态",
+        "戏剧光影",
+        "gorgeous heavy armor",
+        "rich colors",
+        "metallic reflections",
+        "battle epic",
+        "athletic physique",
+        "dramatic lighting"
+      ]
+    },
+    {
+      "name": "mojihe",
+      "styles": []
+    },
+    {
+      "name": "conto",
+      "styles": []
+    },
+    {
+      "name": "rejean dubois",
+      "styles": []
+    },
+    {
+      "name": "kaatokun",
+      "styles": []
+    },
+    {
+      "name": "sin \\(sintrybest\\)",
+      "styles": []
+    },
+    {
+      "name": "glyvees",
+      "styles": []
+    },
+    {
+      "name": "kadeart",
+      "styles": []
+    },
+    {
+      "name": "motida \\(motidamtmt\\)",
+      "styles": []
+    },
+    {
+      "name": "joy boy",
+      "styles": []
+    },
+    {
+      "name": "10den",
+      "styles": []
+    },
+    {
+      "name": "tezy8art",
+      "styles": []
+    },
+    {
+      "name": "takutaku12364",
+      "styles": []
+    },
+    {
+      "name": "eikoh",
+      "styles": []
+    },
+    {
+      "name": "skrats",
+      "styles": []
+    },
+    {
+      "name": "remsrar",
+      "styles": [
+        "萌系透明感",
+        "蓬松厚发",
+        "温暖粉嫩色",
+        "碧蓝/明舟",
+        "volumetric hair",
+        "pastel glowing palette",
+        "glowing eyes"
+      ]
+    },
+    {
+      "name": "jun sung kwak",
+      "styles": []
+    },
+    {
+      "name": "vivo \\(vivo sun 0222\\)",
+      "styles": []
+    },
+    {
+      "name": "nelewdy",
+      "styles": []
+    },
+    {
+      "name": "kkan",
+      "styles": []
+    },
+    {
+      "name": "erovsaaaka",
+      "styles": []
+    },
+    {
+      "name": "carrot 011",
+      "styles": []
+    },
+    {
+      "name": "yuri kyanon",
+      "styles": []
+    },
+    {
+      "name": "an sin",
+      "styles": []
+    },
+    {
+      "name": "aelion draws",
+      "styles": []
+    },
+    {
+      "name": "shoohee",
+      "styles": []
+    },
+    {
+      "name": "sigama",
+      "styles": []
+    },
+    {
+      "name": "tomato rice",
+      "styles": []
+    },
+    {
+      "name": "enn matien",
+      "styles": []
+    },
+    {
+      "name": "banssee",
+      "styles": []
+    },
+    {
+      "name": "porankaran",
+      "styles": [
+        "温润萌系",
+        "幼态可爱",
+        "圆润面部",
+        "温暖色调",
+        "纯真氛围",
+        "干净平涂",
+        "warm moe",
+        "cute youthful",
+        "round soft face",
+        "warm tones",
+        "innocent atmosphere",
+        "clean flat color"
+      ]
+    },
+    {
+      "name": "aburisamon",
+      "styles": []
+    },
+    {
+      "name": "yug \\(ekaki\\)",
+      "styles": [
+        "活泼萌系",
+        "明亮鲜艳",
+        "元气少女",
+        "干净赛璐珞",
+        "二分光影",
+        "朝气活力",
+        "lively moe",
+        "bright vivid",
+        "energetic girl",
+        "clean cel shading",
+        "two-tone shadow",
+        "vibrant energy"
+      ]
+    },
+    {
+      "name": "masuda \\(yousaytwosin\\)",
+      "styles": []
+    },
+    {
+      "name": "sakuremi",
+      "styles": []
+    },
+    {
+      "name": "mimyo",
+      "styles": []
+    },
+    {
+      "name": "j.k.",
+      "styles": []
+    },
+    {
+      "name": "aogisa",
+      "styles": []
+    },
+    {
+      "name": "uyufuzi s",
+      "styles": []
+    },
+    {
+      "name": "meke \\(77842928\\)",
+      "styles": []
+    },
+    {
+      "name": "leebo \\(leeboxxx\\)",
+      "styles": []
+    },
+    {
+      "name": "yamamoto souichirou",
+      "styles": []
+    },
+    {
+      "name": "okuto",
+      "styles": []
+    },
+    {
+      "name": "sabuakadeath",
+      "styles": []
+    },
+    {
+      "name": "yoshiikirablr",
+      "styles": []
+    },
+    {
+      "name": "spacezin",
+      "styles": []
+    },
+    {
+      "name": "iwamushi",
+      "styles": []
+    },
+    {
+      "name": "akitokage",
+      "styles": []
+    },
+    {
+      "name": "bunybunyboi",
+      "styles": []
+    },
+    {
+      "name": "sachito",
+      "styles": []
+    },
+    {
+      "name": "weno",
+      "styles": []
+    },
+    {
+      "name": "grimart",
+      "styles": []
+    },
+    {
+      "name": "chroong",
+      "styles": []
+    },
+    {
+      "name": "gya rb",
+      "styles": []
+    },
+    {
+      "name": "tatsumi \\(psmhbpiuczn\\)",
+      "styles": []
+    },
+    {
+      "name": "dayama",
+      "styles": []
+    },
+    {
+      "name": "naokomama",
+      "styles": []
+    },
+    {
+      "name": "bee \\(deadflow\\)",
+      "styles": []
+    },
+    {
+      "name": "anegawa eiji",
+      "styles": []
+    },
+    {
+      "name": "butakun",
+      "styles": []
+    },
+    {
+      "name": "porqueloin",
+      "styles": []
+    },
+    {
+      "name": "hershuar",
+      "styles": []
+    },
+    {
+      "name": "ie \\(raarami\\)",
+      "styles": []
+    },
+    {
+      "name": "juaag acgy",
+      "styles": []
+    },
+    {
+      "name": "hanny \\(uirusu chan\\)",
+      "styles": []
+    },
+    {
+      "name": "atie1225",
+      "styles": []
+    },
+    {
+      "name": "asahina yoshitoshi",
+      "styles": []
+    },
+    {
+      "name": "dadadadadaist",
+      "styles": []
+    },
+    {
+      "name": "lingyi",
+      "styles": []
+    },
+    {
+      "name": "maniacpaint",
+      "styles": []
+    },
+    {
+      "name": "moony \\(mogmogmelt\\)",
+      "styles": []
+    },
+    {
+      "name": "na tarapisu153",
+      "styles": [
+        "治愈水粉颗粒",
+        "糯软少女",
+        "温暖手绘",
+        "淡雅百合",
+        "grainy chalk/watercolor",
+        "cute soft blush",
+        "healing vibe"
+      ]
+    },
+    {
+      "name": "octosoup",
+      "styles": []
+    },
+    {
+      "name": "sos adult",
+      "styles": []
+    },
+    {
+      "name": "spacetazune",
+      "styles": []
+    },
+    {
+      "name": "takutaku12364",
+      "styles": []
+    },
+    {
+      "name": "eudetenis",
+      "styles": []
+    },
+    {
+      "name": "f.w.zholic",
+      "styles": []
+    },
+    {
+      "name": "huqu",
+      "styles": []
+    },
+    {
+      "name": "hiramoto akira",
+      "styles": []
+    },
+    {
+      "name": "fujimoto tatsuki",
+      "styles": [
+        "电影分镜",
+        "粗糙线稿",
+        "神经质构图",
+        "自由碎线",
+        "漫画电影感",
+        "荒诞情绪",
+        "cinematic manga",
+        "rough sketch lines",
+        "unhinged composition",
+        "film framing"
+      ]
+    },
+    {
+      "name": "kimidake",
+      "styles": []
+    },
+    {
+      "name": "artist:fan no hitori",
+      "styles": []
+    },
+    {
+      "name": "murata yuusuke",
+      "styles": [
+        "动态透视",
+        "神级动作",
+        "肌肉力量",
+        "广角构图",
+        "速度线",
+        "硬核漫画",
+        "dynamic perspective",
+        "action pose",
+        "muscular anatomy",
+        "wide-angle composition"
+      ]
+    },
+    {
+      "name": "hxd",
+      "styles": []
+    },
+    {
+      "name": "iro marimo",
+      "styles": []
+    },
+    {
+      "name": "chin \\(motio7201\\)",
+      "styles": []
+    },
+    {
+      "name": "sagattoru",
+      "styles": []
+    },
+    {
+      "name": "double deck",
+      "styles": []
+    },
+    {
+      "name": "kakuzatou \\(satousatotototo\\)",
+      "styles": []
+    },
+    {
+      "name": "kumakichi",
+      "styles": []
+    },
+    {
+      "name": "hotate-chan",
+      "styles": []
+    },
+    {
+      "name": "yagami hiroki",
+      "styles": [
+        "千禧年魅力",
+        "写实美少女",
+        "OL套装",
+        "光泽肌肤",
+        "精致发丝",
+        "怀旧成人美学",
+        "Y2K glamour",
+        "realistic bishoujo",
+        "office lady outfit",
+        "glossy skin",
+        "detailed hair",
+        "nostalgic mature aesthetic"
+      ]
+    },
+    {
+      "name": "jun \\(rojiura jack\\)",
+      "styles": []
+    },
+    {
+      "name": "piero \\(pieroppai\\)",
+      "styles": []
+    },
+    {
+      "name": "hyji",
+      "styles": []
+    },
+    {
+      "name": "muds",
+      "styles": []
+    },
+    {
+      "name": "gin mitsu",
+      "styles": []
+    },
+    {
+      "name": "mamerakkkkko",
+      "styles": []
+    },
+    {
+      "name": "inkerton-kun",
+      "styles": []
+    },
+    {
+      "name": "whoopsatro",
+      "styles": []
+    },
+    {
+      "name": "ettone",
+      "styles": []
+    },
+    {
+      "name": "batatata77",
+      "styles": []
+    },
+    {
+      "name": "iwao178",
+      "styles": []
+    },
+    {
+      "name": "sugo6969",
+      "styles": []
+    },
+    {
+      "name": "terasu mc",
+      "styles": []
+    },
+    {
+      "name": "toshinoshin",
+      "styles": [
+        "柔和半厚涂",
+        "温暖柔和",
+        "自然光影",
+        "优美造型",
+        "暖色柔光",
+        "精致日式",
+        "soft semi-painterly",
+        "warm soft",
+        "natural lighting",
+        "beautiful design",
+        "warm soft glow",
+        "refined japanese"
+      ]
+    },
+    {
+      "name": "harusame \\(rueken\\)",
+      "styles": [
+        "韩系唯美厚涂",
+        "白皙高光肌",
+        "极光发质",
+        "深邃暗影",
+        "korean luxury semi-realistic",
+        "dewy skin",
+        "luxurious silk texture"
+      ]
+    },
+    {
+      "name": "kamatama rom",
+      "styles": [
+        "清新同人",
+        "干净精致",
+        "明亮清爽",
+        "自然可爱",
+        "日常系",
+        "亲和力",
+        "fresh fan art",
+        "clean refined",
+        "bright fresh",
+        "natural cute",
+        "daily life",
+        "approachable"
+      ]
+    },
+    {
+      "name": "ub1mo",
+      "styles": []
+    },
+    {
+      "name": "sincos",
+      "styles": []
+    },
+    {
+      "name": "matsuda hikari",
+      "styles": []
+    },
+    {
+      "name": "rikuwo",
+      "styles": []
+    },
+    {
+      "name": "huet-pc",
+      "styles": []
+    },
+    {
+      "name": "nakoo",
+      "styles": []
+    },
+    {
+      "name": "gomi \\(kaiwaresan44\\)",
+      "styles": []
+    },
+    {
+      "name": "muromaki",
+      "styles": []
+    },
+    {
+      "name": "mdthetest",
+      "styles": []
+    },
+    {
+      "name": "ignite \\(artist\\)",
+      "styles": []
+    },
+    {
+      "name": "jima",
+      "styles": []
+    },
+    {
+      "name": "artist:kimi \\(hearty yuuki\\)",
+      "styles": []
+    },
+    {
+      "name": "egamim",
+      "styles": []
+    },
+    {
+      "name": "anna o renko",
+      "styles": []
+    },
+    {
+      "name": "hanato \\(seonoaiko\\)",
+      "styles": []
+    },
+    {
+      "name": "gtunver",
+      "styles": []
+    },
+    {
+      "name": "chen bin",
+      "styles": []
+    },
+    {
+      "name": "love cacao",
+      "styles": []
+    },
+    {
+      "name": "nastart",
+      "styles": []
+    },
+    {
+      "name": "aki99",
+      "styles": []
+    },
+    {
+      "name": "kelvin hiu",
+      "styles": []
+    },
+    {
+      "name": "eigaka",
+      "styles": []
+    },
+    {
+      "name": "snegovski",
+      "styles": []
+    },
+    {
+      "name": "khoaphan96",
+      "styles": []
+    },
+    {
+      "name": "blackwhiplash",
+      "styles": []
+    },
+    {
+      "name": "doxy",
+      "styles": []
+    },
+    {
+      "name": "sho-n-d",
+      "styles": []
+    },
+    {
+      "name": "ekrea jan",
+      "styles": []
+    },
+    {
+      "name": "captjerkpants",
+      "styles": []
+    },
+    {
+      "name": "wjs07",
+      "styles": []
+    },
+    {
+      "name": "bm tol",
+      "styles": [
+        "韩式精致",
+        "细腻水润",
+        "淡雅冷色",
+        "丰富层次",
+        "高级质感",
+        "精致厚涂",
+        "korean polished",
+        "smooth dewy",
+        "subtle cool tones",
+        "rich layers",
+        "premium texture",
+        "refined thick painting"
+      ]
+    },
+    {
+      "name": "klaius",
+      "styles": []
+    },
+    {
+      "name": "naga u",
+      "styles": [
+        "性感粗线条",
+        "紧身/兔女郎",
+        "饱满弹性肉感",
+        "张力构图",
+        "bold outlines",
+        "bunny girl/latex tight",
+        "erotic volume"
+      ]
+    },
+    {
+      "name": "melonpuff",
+      "styles": []
+    },
+    {
+      "name": "magnetus",
+      "styles": []
+    },
+    {
+      "name": "brekkist",
+      "styles": []
+    },
+    {
+      "name": "postblue98",
+      "styles": []
+    },
+    {
+      "name": "villainchin",
+      "styles": []
+    },
+    {
+      "name": "shiratama mochi",
+      "styles": []
+    },
+    {
+      "name": "fellatrix",
+      "styles": []
+    },
+    {
+      "name": "sleepypudding",
+      "styles": []
+    },
+    {
+      "name": "diforland",
+      "styles": []
+    },
+    {
+      "name": "artist:skullworms",
+      "styles": []
+    },
+    {
+      "name": "dracksart",
+      "styles": []
+    },
+    {
+      "name": "artist:rabbit \\(wlsdnjs950\\)",
+      "styles": []
+    },
+    {
+      "name": "marmalade mum",
+      "styles": []
+    },
+    {
+      "name": "jtveemo",
+      "styles": []
+    },
+    {
+      "name": "sirfy",
+      "styles": []
+    },
+    {
+      "name": "menoziriath",
+      "styles": []
+    },
+    {
+      "name": "vehn",
+      "styles": []
+    },
+    {
+      "name": "lewdamone",
+      "styles": []
+    },
+    {
+      "name": "ratbawz",
+      "styles": []
+    },
+    {
+      "name": "sunrighto",
+      "styles": []
+    },
+    {
+      "name": "sainttufa",
+      "styles": []
+    },
+    {
+      "name": "peachyp",
+      "styles": []
+    },
+    {
+      "name": "blade \\(galaxist\\)",
+      "styles": []
+    },
+    {
+      "name": "ami thompson",
+      "styles": []
+    },
+    {
+      "name": "rovintus",
+      "styles": []
+    },
+    {
+      "name": "cad \\(caddo\\)",
+      "styles": []
+    },
+    {
+      "name": "andrewcockroach",
+      "styles": []
+    },
+    {
+      "name": "d-rex",
+      "styles": []
+    },
+    {
+      "name": "arttoru",
+      "styles": []
+    },
+    {
+      "name": "domaguri",
+      "styles": []
+    },
+    {
+      "name": "luckyshazo",
+      "styles": []
+    },
+    {
+      "name": "greenu",
+      "styles": []
+    },
+    {
+      "name": "hanpetos",
+      "styles": []
+    },
+    {
+      "name": "rayliicious",
+      "styles": []
+    },
+    {
+      "name": "dannoitanart",
+      "styles": []
+    },
+    {
+      "name": "fluffydango",
+      "styles": []
+    },
+    {
+      "name": "recklessdraw",
+      "styles": []
+    },
+    {
+      "name": "hashira 14",
+      "styles": []
+    },
+    {
+      "name": "prywinko",
+      "styles": []
+    },
+    {
+      "name": "gyarusatan",
+      "styles": []
+    },
+    {
+      "name": "jadony",
+      "styles": []
+    },
+    {
+      "name": "forastero",
+      "styles": []
+    },
+    {
+      "name": "materclaws",
+      "styles": []
+    },
+    {
+      "name": "thatmfdiego",
+      "styles": []
+    },
+    {
+      "name": "jeremy anninos",
+      "styles": []
+    },
+    {
+      "name": "andava",
+      "styles": []
+    },
+    {
+      "name": "boobsgames",
+      "styles": []
+    },
+    {
+      "name": "carlo montie",
+      "styles": []
+    },
+    {
+      "name": "ohisashiburi",
+      "styles": []
+    },
+    {
+      "name": "shikisokuzeku76",
+      "styles": []
+    },
+    {
+      "name": "chilakkk",
+      "styles": []
+    },
+    {
+      "name": "udon \\(udonalium\\)",
+      "styles": []
+    },
+    {
+      "name": "hiramedousa",
+      "styles": []
+    },
+    {
+      "name": "cinko",
+      "styles": []
+    },
+    {
+      "name": "chuck \\(harfmoondark\\)",
+      "styles": []
+    },
+    {
+      "name": "km yama",
+      "styles": []
+    },
+    {
+      "name": "fte \\(fifteen 199\\)",
+      "styles": []
+    },
+    {
+      "name": "kein v",
+      "styles": []
+    },
+    {
+      "name": "artist:monkey jon",
+      "styles": []
+    },
+    {
+      "name": "aochoku",
+      "styles": []
+    },
+    {
+      "name": "j@ck",
+      "styles": []
+    },
+    {
+      "name": "sohn woohyoung",
+      "styles": []
+    },
+    {
+      "name": "rororo",
+      "styles": []
+    },
+    {
+      "name": "knifedragon",
+      "styles": []
+    },
+    {
+      "name": "uuroncha",
+      "styles": []
+    },
+    {
+      "name": "naji yanagida",
+      "styles": []
+    },
+    {
+      "name": "marse \\(rokudaime\\)",
+      "styles": []
+    },
+    {
+      "name": "imuzi",
+      "styles": []
+    },
+    {
+      "name": "obazzotto",
+      "styles": []
+    },
+    {
+      "name": "susukawa \\(susucawa\\)",
+      "styles": []
+    },
+    {
+      "name": "feipin zhanshi",
+      "styles": []
+    },
+    {
+      "name": "cancer \\(zjcconan\\)",
+      "styles": []
+    },
+    {
+      "name": "matsuri \\(araiyuutoo\\)",
+      "styles": [
+        "温暖手绘",
+        "纸张质感",
+        "软萌可爱",
+        "治愈表情",
+        "自然线条",
+        "手工温度",
+        "warm hand-drawn",
+        "paper texture",
+        "soft cute",
+        "healing expression",
+        "natural lines",
+        "handcraft warmth"
+      ]
+    },
+    {
+      "name": "kaninn",
+      "styles": []
+    },
+    {
+      "name": "fungi542",
+      "styles": []
+    },
+    {
+      "name": "blanc \\(whit blanc\\)",
+      "styles": []
+    },
+    {
+      "name": "ringsel",
+      "styles": []
+    },
+    {
+      "name": "jamesloves art",
+      "styles": []
+    },
+    {
+      "name": "tommy \\(kingdukeee\\)",
+      "styles": []
+    },
+    {
+      "name": "slug 1356",
+      "styles": []
+    },
+    {
+      "name": "harusame-r",
+      "styles": [
+        "唯美水彩",
+        "柔和清透",
+        "自然晕染",
+        "温柔可人",
+        "蓬松发丝",
+        "治愈温馨",
+        "beautiful watercolor",
+        "soft transparent",
+        "natural blending",
+        "gentle beauty",
+        "fluffy hair",
+        "healing warmth"
+      ]
+    },
+    {
+      "name": "suujiniku",
+      "styles": []
+    },
+    {
+      "name": "rob 110101101",
+      "styles": []
+    },
+    {
+      "name": "kaki z3",
+      "styles": []
+    },
+    {
+      "name": "takeashiro",
+      "styles": []
+    },
+    {
+      "name": "leviathan \\(hikinito0902\\)",
+      "styles": []
+    },
+    {
+      "name": "sinmo \\(dolomang\\)",
+      "styles": []
+    },
+    {
+      "name": "soldat \\(dndosld73832\\)",
+      "styles": []
+    },
+    {
+      "name": "gen'en \\(sioherashi\\)",
+      "styles": []
+    },
+    {
+      "name": "neg \\(101neg\\)",
+      "styles": []
+    },
+    {
+      "name": "tutou jiang",
+      "styles": []
+    },
+    {
+      "name": "tomochi \\(tmc tmc8\\)",
+      "styles": []
+    },
+    {
+      "name": "doogge",
+      "styles": []
+    },
+    {
+      "name": "joshua \\(shisanli934\\)",
+      "styles": []
+    },
+    {
+      "name": "hyouuma",
+      "styles": []
+    },
+    {
+      "name": "marie merkh",
+      "styles": []
+    },
+    {
+      "name": "tostantan",
+      "styles": []
+    },
+    {
+      "name": "anti kumo",
+      "styles": []
+    },
+    {
+      "name": "yidh 79",
+      "styles": []
+    },
+    {
+      "name": "nyoomcat",
+      "styles": []
+    },
+    {
+      "name": "soramame \\(corndog\\)",
+      "styles": []
+    },
+    {
+      "name": "mamimi \\(mamamimi\\)",
+      "styles": []
+    },
+    {
+      "name": "fkey",
+      "styles": []
+    },
+    {
+      "name": "uqi32",
+      "styles": []
+    },
+    {
+      "name": "sho \\(sho lwlw\\)",
+      "styles": []
+    },
+    {
+      "name": "ikuchan kaoru",
+      "styles": []
+    },
+    {
+      "name": "mochirong",
+      "styles": []
+    },
+    {
+      "name": "modare",
+      "styles": []
+    },
+    {
+      "name": "preview \\(preview0\\)",
+      "styles": []
+    },
+    {
+      "name": "iuui",
+      "styles": []
+    },
+    {
+      "name": "iumu",
+      "styles": []
+    },
+    {
+      "name": "wlop",
+      "styles": [
+        "史诗光影",
+        "数字印象厚涂",
+        "薄雾空气感",
+        "宏大逆光",
+        "壁纸感",
+        "大色块笔触",
+        "cinematic lighting",
+        "misty atmosphere",
+        "backlighting",
+        "impressionistic CG"
+      ]
+    },
+    {
+      "name": "nonco",
+      "styles": []
+    },
+    {
+      "name": "arc2urus",
+      "styles": []
+    },
+    {
+      "name": "gyuunyuu \\(mashika\\)",
+      "styles": []
+    },
+    {
+      "name": "96yottea",
+      "styles": []
+    },
+    {
+      "name": "lulu-chan92",
+      "styles": []
+    },
+    {
+      "name": "okpriko",
+      "styles": []
+    },
+    {
+      "name": "carlo montie",
+      "styles": []
+    },
+    {
+      "name": "soleil \\(soleilmtfbwy03\\)",
+      "styles": []
+    },
+    {
+      "name": "hood \\(james x\\)",
+      "styles": []
+    },
+    {
+      "name": "ciloranko",
+      "styles": [
+        "幻想RPG",
+        "华丽细节",
+        "羽毛蕾丝",
+        "半厚涂",
+        "碎花装饰",
+        "史诗少女",
+        "fantasy RPG",
+        "ornate details",
+        "feathers and lace",
+        "painterly anime"
+      ]
+    },
+    {
+      "name": "s16xue",
+      "styles": []
+    },
+    {
+      "name": "ningen mame",
+      "styles": [
+        "柔软萌系",
+        "圆润面部",
+        "明亮大眼",
+        "温暖治愈",
+        "干净平涂",
+        "柔和阴影",
+        "soft moe",
+        "round face",
+        "bright big eyes",
+        "warm healing",
+        "clean flat color",
+        "gentle shadow"
+      ]
+    },
+    {
+      "name": "seapall",
+      "styles": []
+    },
+    {
+      "name": "dsmile",
+      "styles": [
+        "高明度果冻",
+        "干净画面",
+        "水润美少女",
+        "亮莹眼睛",
+        "清透色彩",
+        "柔和萌系",
+        "bright jelly skin",
+        "clean illustration",
+        "sparkling eyes",
+        "soft moe"
+      ]
+    },
+    {
+      "name": "akita hika",
+      "styles": []
+    },
+    {
+      "name": "hu dako",
+      "styles": []
+    },
+    {
+      "name": "suzukasuraimu",
+      "styles": []
+    },
+    {
+      "name": "namespace",
+      "styles": []
+    },
+    {
+      "name": "yeej chan",
+      "styles": []
+    },
+    {
+      "name": "aiharararara",
+      "styles": []
+    },
+    {
+      "name": "1=2",
+      "styles": []
+    },
+    {
+      "name": "hashimoto kokai",
+      "styles": []
+    },
+    {
+      "name": "reddizen",
+      "styles": []
+    },
+    {
+      "name": "sweetonedollar",
+      "styles": []
+    },
+    {
+      "name": "azuki \\(azuki-taste\\)",
+      "styles": []
+    },
+    {
+      "name": "lobsteranian",
+      "styles": []
+    },
+    {
+      "name": "lukapia",
+      "styles": []
+    },
+    {
+      "name": "yan kodiac",
+      "styles": []
+    },
+    {
+      "name": "artist:kyel hyde",
+      "styles": []
+    },
+    {
+      "name": "unfairr",
+      "styles": []
+    },
+    {
+      "name": "sakauchi waka",
+      "styles": []
+    },
+    {
+      "name": "gloss \\(hotglossed\\)",
+      "styles": []
+    },
+    {
+      "name": "so-taro",
+      "styles": []
+    },
+    {
+      "name": "popogori",
+      "styles": []
+    },
+    {
+      "name": "kuroi suna",
+      "styles": []
+    },
+    {
+      "name": "dainillust",
+      "styles": []
+    },
+    {
+      "name": "shion \\(mirudakemann\\)",
+      "styles": []
+    },
+    {
+      "name": "driftingtiger",
+      "styles": []
+    },
+    {
+      "name": "phamoz",
+      "styles": []
+    },
+    {
+      "name": "jonpei",
+      "styles": []
+    },
+    {
+      "name": "octahooves",
+      "styles": []
+    },
+    {
+      "name": "artist:octahooves",
+      "styles": []
+    },
+    {
+      "name": "wonbin lee",
+      "styles": []
+    },
+    {
+      "name": "mapyuhin za puremiyamu",
+      "styles": []
+    },
+    {
+      "name": "sunna \\(nilsunna\\)",
+      "styles": []
+    },
+    {
+      "name": "niao fan",
+      "styles": []
+    },
+    {
+      "name": "cglas",
+      "styles": []
+    },
+    {
+      "name": "jiro \\(ninetysix\\)",
+      "styles": []
+    },
+    {
+      "name": "artist:safiru",
+      "styles": []
+    },
+    {
+      "name": "sunhuiz",
+      "styles": []
+    },
+    {
+      "name": "ayaki blade",
+      "styles": []
+    },
+    {
+      "name": "pluvium grandis",
+      "styles": []
+    },
+    {
+      "name": "nat the lich",
+      "styles": []
+    },
+    {
+      "name": "mamba",
+      "styles": []
+    },
+    {
+      "name": "fugtrup",
+      "styles": []
+    },
+    {
+      "name": "billyhhyb",
+      "styles": []
+    },
+    {
+      "name": "oil painting \\(medium\\)",
+      "styles": [
+        "传统油画",
+        "厚涂肌理",
+        "画布纹理",
+        "古典质感",
+        "堆刀痕",
+        "impasto",
+        "oil painting",
+        "canvas texture",
+        "classical medium"
+      ]
+    },
+    {
+      "name": "impasto",
+      "styles": []
+    },
+    {
+      "name": "flat color",
+      "styles": []
+    },
+    {
+      "name": "sketch",
+      "styles": []
+    },
+    {
+      "name": "ink wash painting",
+      "styles": []
+    },
+    {
+      "name": "ink \\(medium\\)",
+      "styles": []
+    },
+    {
+      "name": "realistic",
+      "styles": []
+    },
+    {
+      "name": "photorealistic",
+      "styles": []
+    },
+    {
+      "name": "pixel art",
+      "styles": []
+    },
+    {
+      "name": "anime screencap",
+      "styles": []
+    },
+    {
+      "name": "painterly",
+      "styles": []
+    },
+    {
+      "name": "pixel art",
+      "styles": []
+    },
+    {
+      "name": "retro artstyle",
+      "styles": [
+        "复古赛璐珞",
+        "80s动画",
+        "90s胶片",
+        "千禧年前滤镜",
+        "柔光噪点",
+        "老动画眼型",
+        "retro cel anime",
+        "80s style",
+        "90s film grain",
+        "soft glow"
+      ]
+    }
+  ],
+  "descriptions": {
+    "meaning of colors": " 还原度：绿色代表良好；黄色代表适中；红色代表过拟合，需要降低强度使用。其他类：颜色代表频繁程度，越偏红说明出现的越少",
+    "fit": "还原度",
+    "uncategorized": "尚未精细分类，暂时沿用老版本分类，后续更新",
+    "classic": "经典日式gal",
+    "retro": "20世纪",
+    "cleand color": "清爽的颜色",
+    "oiled skin": "油腻皮肤",
+    "thick shadow": "浓阴影",
+    "semi realistic": "半写实",
+    "sketch": "明显的线条",
+    "rough sketch": "更加粗糙的线条",
+    "flatcolor": "没有过渡，平面的颜色",
+    "smooth color": "过渡细腻的颜色",
+    "simple color": "简单的平涂，比flatcolor稍微精细些",
+    "western": "五官、肢体方面具有典型的西方画风",
+    "half impasto": "半厚涂，边缘线条清晰",
+    "impasto": "厚涂",
+    "colorful": "色彩缤纷",
+    "monochrome": "单色、黑白",
+    "yuri": "此类画风更偏向女性、耽美",
+    "sfw": "没有r18图",
+    "official": "官方",
+    "general": "常规词"
+  },
+  "styleColumns": [
+    "uncategorized",
+    "classic",
+    "retro",
+    "cleand color",
+    "oiled skin",
+    "thick shadow",
+    "semi realistic",
+    "sketch",
+    "rough sketch",
+    "flatcolor",
+    "smooth color",
+    "simple color",
+    "western",
+    "half impasto",
+    "impasto",
+    "3d",
+    "colorful",
+    "monochrome",
+    "futanari",
+    "femboy",
+    "yuri",
+    "muscular/toned",
+    "chubby",
+    "cute",
+    "mature female",
+    "foot focus",
+    "doujinshi",
+    "sfw",
+    "official",
+    "general"
+  ]
+}

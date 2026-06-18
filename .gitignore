@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.DS_Store
+Thumbs.db
+
+# 大图排除，仅保留 thumbnails/
+artist_style_test_20260526/*.png

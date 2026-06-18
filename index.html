@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1025超级对照画廊 - 顶级美术工业化交付</title>
+    <!-- 引入高档 Outfit 现代字体 (使用国内高速镜像防止网络阻塞) -->
+    <link href="https://fonts.loli.net/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0a0a0f;
+            --bg-glass: rgba(18, 18, 26, 0.75);
+            --bg-card: rgba(25, 25, 35, 0.55);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(147, 51, 234, 0.4);
+            
+            --accent: #a855f7;
+            --accent-glow: rgba(168, 85, 247, 0.3);
+            --accent-blue: #3b82f6;
+            
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --success: #10b981;
+            --danger: #ef4444;
+            --font-family: 'Outfit', 'Noto Sans SC', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: var(--font-family);
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(59, 82, 246, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        /* 磨砂毛玻璃 Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .header-left p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* 数据大盘 Dashboard */
+        .stats-panel {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: right;
+        }
+
+        .stat-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--accent);
+            text-shadow: 0 0 12px var(--accent-glow);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.1rem;
+        }
+
+        /* 控制台 Container */
+        .main-container {
+            max-width: 1600px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* 搜索和筛选控制面板 */
+        .control-bar {
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-box {
+            flex: 2;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-glass);
+            border-radius: 8px;
+            padding: 0.8rem 1.2rem;
+            color: var(--text-main);
+            font-family: var(--font-family);
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+        }
+
+        .filter-select {
+            flex: 1;
+            min-width: 180px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-glass);
+            border-radius: 8px;
+            padding: 0.8rem;
+            color: var(--text-main);
+            font-family: var(--font-family);
+            font-size: 0.95rem;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .filter-select:focus {
+            border-color: var(--accent);
+        }
+
+        /* 画廊网格 */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* 玻璃卡片 */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            aspect-ratio: 3 / 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.25;
+            transition: all 0.4s;
+            z-index: 1;
+        }
+
+        .card.has-img::before {
+            opacity: 0.35;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 24px var(--accent-glow);
+        }
+
+        .card.is-kb {
+            border-color: rgba(168, 85, 247, 0.28);
+            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.08);
+        }
+
+        .card.is-kb:hover {
+            border-color: #c084fc;
+            box-shadow: 0 12px 30px rgba(168, 85, 247, 0.45);
+        }
+
+        .card:hover::before {
+            transform: scale(1.05);
+            opacity: 0.65;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(to top, rgba(10, 10, 15, 0.95) 40%, rgba(10, 10, 15, 0) 100%);
+            margin: -1.5rem;
+            padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+            border-radius: 0 0 16px 16px;
+        }
+
+        .card-idx {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.15);
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            z-index: 2;
+            transition: color 0.3s;
+        }
+
+        .card:hover .card-idx {
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .card-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .status-badge.success {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .status-badge.danger {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        /* 终极 Viewer 灯箱 Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 5, 8, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            max-width: 1100px;
+            width: 90%;
+            max-height: 90vh;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+            transform: scale(0.92);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .modal.active .modal-container {
+            transform: scale(1);
+        }
+
+        .modal-left {
+            flex: 1.2;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            aspect-ratio: 3 / 4;
+            max-height: 80vh;
+        }
+
+        .modal-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .modal-right {
+            flex: 1;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto;
+            border-left: 1px solid var(--border-glass);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-idx {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            opacity: 0.3;
+        }
+
+        .prompt-title {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt-box {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 1rem;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #c084fc;
+            max-height: 160px;
+            overflow-y: auto;
+            word-break: break-all;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-copy {
+            background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+            border: none;
+            border-radius: 8px;
+            padding: 0.8rem 1.5rem;
+            color: #fff;
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+        }
+
+        .btn-copy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-glass);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            background: var(--danger);
+        }
+
+        /* 隐藏的提示条 */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(16, 185, 129, 0.95);
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s;
+            z-index: 2000;
+        }
+
+        .toast.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 响应式断点 */
+        @media (max-width: 900px) {
+            .modal-container {
+                flex-direction: column;
+                max-height: 95vh;
+            }
+            .modal-left {
+                aspect-ratio: 4 / 3;
+            }
+        }
+
+        /* 收藏星星按钮样式 */
+        .card-fav-btn {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 10;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            line-height: 1;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-fav-btn:hover {
+            color: rgba(253, 224, 71, 0.8);
+            transform: scale(1.2);
+        }
+
+        .card-fav-btn.active {
+            color: #fde047;
+            text-shadow: 0 0 10px rgba(253, 224, 71, 0.8), 0 0 2px rgba(0, 0, 0, 0.8);
+        }
+
+        /* 卡片底部小标签行样式 */
+        .card-tags-row {
+            display: flex;
+            gap: 0.3rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .card-mini-tag {
+            background: rgba(168, 85, 247, 0.15);
+            color: #c084fc;
+            border: 1px solid rgba(168, 85, 247, 0.25);
+            border-radius: 4px;
+            font-size: 0.7rem;
+            padding: 0.1rem 0.4rem;
+            font-weight: 600;
+            white-space: nowrap;
+            max-width: 90px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Modal 内部标签样式 */
+        .modal-tag {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            border-radius: 6px;
+            padding: 0.25rem 0.6rem;
+            font-size: 0.8rem;
+            color: var(--text-main);
+            transition: all 0.3s;
+        }
+
+        .modal-tag:hover {
+            border-color: var(--accent);
+            background: rgba(168, 85, 247, 0.1);
+        }
+
+        .modal-tag-del {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0 0.1rem;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .modal-tag-del:hover {
+            color: var(--danger);
+        }
+
+        /* ================= AI 导师悬浮窗样式 ================= */
+        /* AI 悬浮球按钮 */
+        .ai-float-trigger {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px rgba(168, 85, 247, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-size: 1.8rem;
+        }
+
+        .ai-float-trigger:hover {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 12px 40px rgba(168, 85, 247, 0.6);
+        }
+
+        /* AI 侧边面板 */
+        .ai-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 450px;
+            height: 100vh;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-left: 1px solid var(--border-glass);
+            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ai-panel.active {
+            transform: translateX(0);
+        }
+
+        /* AI 头部 */
+        .ai-header {
+            padding: 1.8rem;
+            border-bottom: 1px solid var(--border-glass);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, rgba(168, 85, 247, 0.1), transparent);
+        }
+
+        .ai-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ai-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .ai-close:hover {
+            color: var(--danger);
+        }
+
+        /* 聊天区域 */
+        .ai-chat-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        /* 气泡样式 */
+        .chat-bubble {
+            max-width: 85%;
+            padding: 0.9rem 1.2rem;
+            border-radius: 14px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            word-wrap: break-word;
+            position: relative;
+            animation: bubbleFadeIn 0.3s ease forwards;
+        }
+
+        @keyframes bubbleFadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .chat-bubble.user {
+            align-self: flex-end;
+            background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+            color: #fff;
+            border-bottom-right-radius: 2px;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25);
+        }
+
+        .chat-bubble.ai {
+            align-self: flex-start;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            border-bottom-left-radius: 2px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 黑科技联动芯片 */
+        .ai-chip {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(59, 82, 246, 0.2) 100%);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            color: #c084fc;
+            border-radius: 6px;
+            padding: 0.25rem 0.6rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin: 0.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: all 0.3s;
+            box-shadow: 0 0 8px rgba(168, 85, 247, 0.1);
+        }
+
+        .ai-chip:hover {
+            border-color: #a855f7;
+            background: rgba(168, 85, 247, 0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+        }
+
+        /* 聊天输入框区域 */
+        .ai-footer {
+            padding: 1.2rem;
+            border-top: 1px solid var(--border-glass);
+            display: flex;
+            gap: 0.8rem;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .ai-input {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-glass);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            color: var(--text-main);
+            font-family: var(--font-family);
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .ai-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+        }
+
+        .ai-send-btn {
+            background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+            border: none;
+            border-radius: 8px;
+            width: 46px;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .ai-send-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+        }
+
+        /* AI 正在输入加载动画 */
+        .typing-indicator {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 10px;
+        }
+
+        .typing-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: typingBounce 1.4s infinite ease-in-out both;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typingBounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶层毛玻璃头部 -->
+    <header>
+        <div class="header-left">
+            <h1>1025 超级画师画风对照馆</h1>
+            <p>illustrious 顶级二次元大模型对照视觉艺术展</p>
+        </div>
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-value" id="stats-total">1025</div>
+                <div class="stat-label">画师总数</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="stats-generated">0</div>
+                <div class="stat-label">已合龙</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="stats-percent">0%</div>
+                <div class="stat-label">达成率</div>
+            </div>
+            <div class="stat-item" style="border-left: 1px solid var(--border-glass); padding-left: 2rem;">
+                <div class="stat-value" id="stats-rag-chunks" style="font-size:1.2rem;">0</div>
+                <div class="stat-label">🎯 知识库文本块</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 交互控制面板 -->
+    <main class="main-container">
+        <div class="control-bar">
+            <div class="search-box" style="flex:1.5; min-width:250px;">
+                <input type="text" id="search-input" placeholder="输入画师名称、编号或自定义标签模糊搜索...">
+            </div>
+            <div class="search-box" style="flex:1.5; min-width:250px; position:relative;">
+                <input type="text" id="rag-search-input" placeholder="🎨 画风语义搜索：如「厚涂暗色调逆光」「萌系水彩治愈」" style="padding-right:2.5rem;">
+                <button id="rag-search-clear" style="position:absolute; right:0.5rem; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:1.2rem; display:none; line-height:1;" title="清除语义搜索">&times;</button>
+            </div>
+            <select class="filter-select" id="batch-filter">
+                <option value="all">所有画师批次</option>
+                <option value="first">第一批次 (1 - 500)</option>
+                <option value="second">第二批次 (501 - 1025)</option>
+            </select>
+            <select class="filter-select" id="status-filter">
+                <option value="all">所有生成状态</option>
+                <option value="done">已生成/合龙</option>
+                <option value="missing">未生成/回填</option>
+            </select>
+            <select class="filter-select" id="favorite-filter">
+                <option value="all">所有收藏状态</option>
+                <option value="fav">仅看已收藏 ★</option>
+                <option value="unfav">仅看未收藏 ☆</option>
+            </select>
+            <button class="btn-copy" id="rag-rebuild-btn" onclick="rebuildRagIndex()" style="background: linear-gradient(135deg, rgba(16,185,129,0.15) 0%, rgba(59,130,246,0.15) 100%); border: 1px solid rgba(16,185,129,0.25); box-shadow: none; height: 100%; min-width: 140px; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size:0.85rem;">
+                <span>🔄</span> 重建知识库
+            </button>
+            <button class="btn-copy" id="matrix-btn" onclick="toggleMatrixModal()" style="background: linear-gradient(135deg, rgba(236,72,153,0.15) 0%, rgba(168,85,247,0.15) 100%); border: 1px solid rgba(236,72,153,0.25); box-shadow: none; height: 100%; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <span>🧘‍♀️</span> 瑜伽人妻风格图鉴
+            </button>
+        </div>
+
+        <!-- 响应式网格 -->
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- 动态卡片 -->
+        </div>
+        
+        <!-- 滚动无限加载哨兵 -->
+        <div id="scroll-sentinel" style="height: 50px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.95rem; font-weight: 600; margin: 2rem 0; letter-spacing: 1px;">
+            ✨ 向上滚动加载更多画师...
+        </div>
+    </main>
+
+    <!-- 终极灯箱大图 Modal -->
+    <div class="modal" id="viewer-modal">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-container">
+            <div class="modal-left">
+                <img id="modal-img" src="" alt="高精大图">
+            </div>
+            <div class="modal-right">
+                <div>
+                    <div class="modal-header">
+                        <div>
+                            <div class="modal-title" id="modal-title">画师名称</div>
+                            <div class="status-badge" id="modal-status">已生成</div>
+                        </div>
+                        <div class="modal-idx" id="modal-idx">#001</div>
+                    </div>
+                    
+                    <div class="prompt-title">CLIP 极致分词优化正向提示词</div>
+                    <div class="prompt-box" id="modal-prompt">Prompt text</div>
+
+                    <!-- 🌟 核心馆藏深度研判看板 -->
+                    <div id="modal-kb-box" style="display: none; background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 12px; padding: 1.2rem; margin-top: 1.2rem; margin-bottom: 1.5rem; box-shadow: inset 0 0 12px rgba(168, 85, 247, 0.05);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;">
+                            <span style="font-size: 1.2rem;">🌟</span>
+                            <span style="font-weight: 800; color: #c084fc; font-size: 0.95rem; letter-spacing: 1px;">核心馆藏深度研判</span>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 0.8rem; border-bottom: 1px dashed rgba(168, 85, 247, 0.2); padding-bottom: 0.8rem;">
+                            <div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">中文别称</div>
+                                <div id="kb-alias" style="font-weight: 700; color: #fff; font-size: 0.9rem;">-</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem;">艺术流派</div>
+                                <div id="kb-genre" style="font-weight: 700; color: #c084fc; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">-</div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 0.8rem;">
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.3rem;">推荐调参权重 (Weight)</div>
+                            <div style="display: flex; align-items: center; gap: 0.8rem;">
+                                <div id="kb-weight" style="font-family: monospace; font-size: 1.1rem; font-weight: 800; color: var(--success); text-shadow: 0 0 8px rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); padding: 0.2rem 0.6rem; border-radius: 6px;">1.0</div>
+                                <div style="flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; position: relative;">
+                                    <div id="kb-weight-bar" style="position: absolute; left: 0%; right: 0%; top: 0; bottom: 0; background: linear-gradient(to right, var(--success), #a855f7); border-radius: 3px; box-shadow: 0 0 8px var(--success);"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 0.8rem; background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.15); border-radius: 8px; padding: 0.8rem;">
+                            <div style="font-size: 0.75rem; color: var(--danger); font-weight: 800; display: flex; align-items: center; gap: 0.3rem; margin-bottom: 0.25rem;">
+                                <span>⚠️</span> AI 避坑与调参指南
+                            </div>
+                            <div id="kb-tips" style="font-size: 0.8rem; color: #fca5a5; line-height: 1.5;">-</div>
+                        </div>
+                        <div id="kb-features-box" style="margin-bottom: 0.8rem;">
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.3rem;">画风视觉特征</div>
+                            <ul id="kb-features" style="font-size: 0.8rem; color: var(--text-main); line-height: 1.5; padding-left: 1.2rem;">
+                                <!-- 动态特征 -->
+                            </ul>
+                        </div>
+                        <div id="kb-golden-box" style="display: none;">
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.3rem;">专属黄金组合提示词</div>
+                            <div id="kb-golden-prompt" style="background: rgba(0,0,0,0.5); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 8px; padding: 0.6rem 0.8rem; font-family: monospace; font-size: 0.8rem; color: #c084fc; word-break: break-all; max-height: 80px; overflow-y: auto; margin-bottom: 0.5rem;">-</div>
+                            <button class="btn-copy" id="kb-copy-btn" onclick="copyGoldenPrompt()" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: auto; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(59, 82, 246, 0.2) 100%); border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: none; height: auto;">📋 复制黄金组合 Prompt</button>
+                        </div>
+                    </div>
+
+                    <!-- 🏷️ 特征标记 & 收藏管理盒 -->
+                    <div style="margin-top: 1.5rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem; margin-bottom: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                            <span class="prompt-title" style="margin-bottom: 0;">🏷️ 画师特征标记 & 收藏</span>
+                            <button id="modal-fav-btn" onclick="toggleFavFromModal()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-muted); transition: all 0.3s ease; line-height: 1;">★</button>
+                        </div>
+                        <div id="modal-tags-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem;">
+                            <!-- 动态标签 -->
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input type="text" id="modal-tag-input" placeholder="输入标签名按回车添加..." style="flex: 1; background: rgba(0,0,0,0.4); border: 1px solid var(--border-glass); border-radius: 6px; padding: 0.5rem 0.8rem; color: var(--text-main); font-family: var(--font-family); font-size: 0.85rem; outline: none;">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-copy" onclick="copyPrompt()">
+                    <span>📋</span> 复制极致优化 Prompt
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🧘‍♀️ 瑜伽服人妻风格图鉴 Modal -->
+    <div class="modal" id="matrix-modal">
+        <button class="modal-close" onclick="toggleMatrixModal()">×</button>
+        <div class="modal-container" style="max-width: 1300px; width: 95%; max-height: 90vh; flex-direction: column; padding: 2.5rem; overflow-y: auto;">
+            <!-- 头部 -->
+            <div style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 1.5rem; display: flex; gap: 2rem; flex-wrap: wrap; align-items: center;">
+                <img src="/images/yoga_housewife.png" alt="瑜伽人妻手鉴" style="width: 140px; height: 186px; object-fit: cover; border-radius: 16px; border: 2px solid rgba(236,72,153,0.3); box-shadow: 0 8px 24px rgba(236,72,153,0.2);">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, #ec4899 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.8rem; letter-spacing: 1px;">🧘‍♀️ 瑜伽服人妻 30 核心风格图鉴</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.6rem;">
+                        本对照馆由 30 个核心画风维度交叉构建而成。我们以<strong>“身穿紧身瑜伽服的温婉人妻（Mature Female in Tight Yoga Outfit）”</strong>为唯一样本，在 <code>illustrious</code> 模型下死锁 Seed 批量生图，为您直观呈献各种风格的实战出图特性！
+                    </p>
+                    <p style="font-size: 0.85rem; color: #a855f7; display: flex; align-items: center; gap: 0.4rem; font-weight: 600;">
+                        <span>💡</span> 还原度 (fit) 颜色说明：🟢绿色=还原优良 (权重 1.0)；🟡黄色=还原适中 (权重 0.8-1.0)；🔴红色=过拟合警告！极易崩肢体 (建议权重限制在 0.5-0.75)。其他类：越偏红说明出图频繁度越低。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 列表容器 -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1.5rem;">
+                
+                <!-- 1. fit -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_uncategorized.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">fit (还原度)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">🟢 核心调参</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            评估画师的画风还原精度。绿色代表画面高度稳定，人妻身姿曼妙温婉，可直接在 1.0 满权重下出图；红色则为过拟合警戒，极易崩坏。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. classic -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_classic.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">classic (经典日式gal)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(59,82,246,0.15); color: var(--accent-blue); border: 1px solid rgba(59,82,246,0.3);">🎨 艺术年代</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            经典的日系美少女游戏风格。线条流畅清爽，人妻双眸含情，面色微红，展现出令人怦然心动的温润美感。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. retro -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_retro.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">retro (20世纪复古)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(59,82,246,0.15); color: var(--accent-blue); border: 1px solid rgba(59,82,246,0.3);">🎨 艺术年代</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            赛璐珞胶片感拉满。人妻仿佛从 90 年代经典 OVA 美少女作品中走出，自带温暖和旧式底片冲洗光晕。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. cleand color -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_cleand_color.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">cleand color (清爽色彩)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 涂装色彩</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            明度上佳，色彩透亮。身着天蓝色或粉色系紧身衣的人妻，在干净通透的瑜伽房内呈现明丽、爽朗的冷色调光影。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. oiled skin -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_oiled_skin.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">oiled skin (油腻皮肤)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(236,72,153,0.15); color: #ec4899; border: 1px solid rgba(236,72,153,0.3);">🍑 质感解剖</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            流汗后的油亮反光质感！人妻白皙的肌肤上泛着因拉伸运动流汗后的油润光泽，瑜伽裤微湿贴身，极具诱人肉感。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6. thick shadow -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_thick_shadow.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">thick shadow (浓重阴影)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 涂装色彩</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            强对比度的逆光深邃硬质阴影。人妻侧身处于强光源下，在阴影侧形成极扎实的暗块，大幅度雕刻突出身体曲线。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 7. semi realistic -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_semi_realistic.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">semi realistic (半写实风)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(59,82,246,0.15); color: var(--accent-blue); border: 1px solid rgba(59,82,246,0.3);">🎨 艺术年代</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            写实比例与唯美颜值平衡。人妻瑜伽动作的肌肉拉伸、瑜伽服的真实衣褶充满空间物理质感。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 8. sketch -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_sketch.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">sketch (明显的线条)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 线条笔触</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            素雅明显的铅笔稿线。人妻的瑜伽服及发丝轮廓周围拥有手绘线条勾勒，呈现素雅手稿插画风。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 9. rough sketch -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_rough_sketch.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">rough sketch (更粗糙线条)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 线条笔触</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            狂野快速的手绘草线。人妻在做瑜伽延伸动作时，周身被充满力量的速度辅助线条环绕，张力十足。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 10. flatcolor -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_flatcolor.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">flatcolor (扁平平面色)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 涂装色彩</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            完全没有明暗阴影的平涂。人妻的瑜伽服和皮肤完全采用扁平大色块填充，展现极纯复古赛璐珞卡通感。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 11. smooth color -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_smooth_color.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">smooth color (过渡细腻色)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 涂装色彩</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            漫反射阴影极其细腻。人妻的紧身裤在自然光照下，展现出平滑温润、明暗交融的高档绸缎哑光光影。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 12. simple color -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_simple_color.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">simple color (简单的平涂)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 涂装色彩</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            比 flatcolor 略微精细。在平面上色的基础上，仅在人妻的锁骨、胸部下沿和褶皱暗部点缀了利落的阴影。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 13. western -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_western.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">western (典型的西方风)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(59,82,246,0.15); color: var(--accent-blue); border: 1px solid rgba(59,82,246,0.3);">🎨 艺术年代</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            西方美漫或原画风。人妻身材偏向极其丰满大气的沙漏型写实比重，肢体与动作神态皆有极强的美漫力量。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 14. half impasto -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_half_impasto.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">half impasto (半厚涂风)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 涂装色彩</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            边缘线条轮廓明显，但衣服和肌肤内部有极其厚重的笔触叠加与上色，达到一种立体折衷感。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 15. impasto -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_impasto.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">impasto (纯正厚涂)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 涂装色彩</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            不依赖任何勾线的油画风。直接以饱满厚重、笔触质感明显的油画颜料色块，堆叠出人妻丰满温润的体态轮廓。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 16. 3d -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_3d.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">3d (三维立体)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(59,82,246,0.15); color: var(--accent-blue); border: 1px solid rgba(59,82,246,0.3);">🎨 艺术年代</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            三维立体感。人妻的瑜伽姿态带有鲜明的 3D 三维立面和光源折射表现，极其富有建模雕刻的块面感。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 17. colorful -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_colorful.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">colorful (色彩缤纷)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 涂装色彩</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            霓虹炫彩折射。斑斓的冷暖色调或镭射质感打在人妻紧身瑜伽服上，呈现出极其艳丽、动感的斑斓光彩。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 18. monochrome -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_monochrome.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">monochrome (黑白单色)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">✨ 涂装色彩</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            纯粹黑白铅笔排线或水墨光影。彻底摒弃杂乱色彩，只以极致的黑与白表现出人妻优雅动作下的身材曲线。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 19. futanari -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_futanari.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">futanari (扶他特化)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(236,72,153,0.15); color: #ec4899; border: 1px solid rgba(236,72,153,0.3);">🍑 质感解剖</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            特定扶他画师风格的局部张力表现。在人妻拉伸动作中，画面会微微特化大腿根部及臀腹部分的局部线条轮廓。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 20. femboy -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_femboy.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">femboy (伪娘男娘特征)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(236,72,153,0.15); color: #ec4899; border: 1px solid rgba(236,72,153,0.3);">🍑 质感解剖</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            极其纤弱可爱的男娘画法。即使在常规少妇的表现下，体态勾线也会呈现出略微修长、纤细且轻盈的特殊美感。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 21. yuri -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_yuri.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">yuri (百合耽美倾向)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(236,72,153,0.15); color: #ec4899; border: 1px solid rgba(236,72,153,0.3);">🍑 质感解剖</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            极度唯美柔和的偏向。画面呈现出非常柔曼细致的线条设计，人妻神态中有着百合动漫特有的清秀出尘。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 22. muscular/toned -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_muscular_toned.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">muscular (健美肌肉)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(236,72,153,0.15); color: #ec4899; border: 1px solid rgba(236,72,153,0.3);">🍑 质感解剖</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            修长紧致的健美肌肉人妻！小腹处性感的马甲线和股四头肌肌肉隐约可见，充满长期有氧运动与瑜伽特有的力量。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 23. chubby -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_chubby.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">chubby (饱满肉感)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(236,72,153,0.15); color: #ec4899; border: 1px solid rgba(236,72,153,0.3);">🍑 质感解剖</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            微胖丰腴人妻的天堂！紧绷的粉色瑜伽服勒出人妻腰臀、大腿根处极其水润丰满的肉感曲线，温婉诱人。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 24. cute -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_cute.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">cute (温婉元气)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(236,72,153,0.15); color: #ec4899; border: 1px solid rgba(236,72,153,0.3);">🍑 质感解剖</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            娇俏甜美的少妇容颜。拥有圆润可爱的大眼睛与小嘴唇，哪怕身穿成熟瑜伽裤，也是满满的温润治愈元气。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 25. mature female -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_mature_female.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">mature female (成熟少妇)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(236,72,153,0.15); color: #ec4899; border: 1px solid rgba(236,72,153,0.3);">🍑 质感解剖</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            极具母性光辉的人妻风情。眉梢眼角透着人妻优雅端庄的岁月韵味，散发出极致的成熟温柔魅力。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 26. foot focus -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_foot_focus.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">foot focus (足部聚焦)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(236,72,153,0.15); color: #ec4899; border: 1px solid rgba(236,72,153,0.3);">🍑 质感解剖</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            精雕细琢的足部刻画特写。在瑜伽垫上，人妻赤脚伸拉，其细嫩秀美的足弓、脚趾与足底肌肉轮廓被极致雕刻。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 27. doujinshi -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_doujinshi.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">doujinshi (同人志风)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(59,82,246,0.15); color: var(--accent-blue); border: 1px solid rgba(59,82,246,0.3);">🎨 艺术年代</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            极富热情的同人手绘气息。人妻线条极其富有柔润弹性，色彩充盈温情，极具同人社团精心手作特质。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 28. sfw -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_sfw.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">sfw (无擦边安全词)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">🟢 核心调参</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            全年龄绝对安全健康。人妻身着得体瑜伽服在正规阳光瑜伽室拉伸，完全摒弃任何 R18 违规擦边设计。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 29. official -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_official.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">official (官方美术品质)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">🟢 核心调参</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            商业级海报宣传大作。人妻的瑜伽服面料细节充沛无暇，手部、脸部五官勾画极其正统精致，构图优美。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 30. general -->
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.3s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-glass)'">
+                    <img src="/images/yoga/yoga_general.png" onerror="this.src='/images/yoga_housewife.png'" style="width: 80px; height: 107px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-glass); background: #000;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span style="font-weight: 700; color: #fff; font-size: 1.05rem;">general (常规通用词)</span>
+                            <span style="font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--success); border: 1px solid rgba(16,185,129,0.3);">🟢 核心调参</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                            最经典、标准的中立二次元紧身瑜伽服人妻。色彩饱满自然，线条圆润流畅，没有任何偏激特征。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast 提示条 -->
+    <div class="toast" id="toast">复制成功！</div>
+
+    <!-- AI 智能调参助手面板 -->
+    <button class="ai-float-trigger" onclick="toggleAiPanel()" title="AI 画风导师已就绪">🤖</button>
+    
+    <div class="ai-panel" id="ai-panel">
+        <div class="ai-header">
+            <div class="ai-title">🤖 AI 智能画风调参导师</div>
+            <button class="ai-close" onclick="toggleAiPanel()">×</button>
+        </div>
+        <div class="ai-chat-body" id="ai-chat-body">
+            <div class="chat-bubble ai">
+                伟大的人工智能驾驭者 **Eric.hls**，尊贵的主人，我是您的 AI 画风调参导师！<br><br>
+                我可以为您提供：<br>
+                1. 🎨 **智能画风推荐**：如“推荐一个带有机甲感觉、冷蓝逆光的画师”<br>
+                2. 📋 **极智 Prompt 生成**：结合选定画师为您自动生成商业大作起词<br>
+                3. 🚀 **黑科技智能联动**：点击我推荐的画师芯片，即可在后方画廊中一键定位大图！<br><br>
+                请问您今天想驾驭什么样的画风视觉？
+            </div>
+        </div>
+        <div class="ai-footer">
+            <input type="text" id="ai-input-box" class="ai-input" placeholder="向 AI 导师提问或获取画风起词..." onkeydown="handleAiInputKey(event)">
+            <button class="ai-send-btn" onclick="sendAiMessage()">✈️</button>
+        </div>
+    </div>
+
+    <script>
+        // --- 收藏与标签引擎底座 (LocalStorage) ---
+        let favorites = new Set();
+        let artistTagsMap = {};
+
+        function initFavAndTags() {
+            try {
+                const favData = localStorage.getItem('gallery_favorites');
+                if (favData) { favorites = new Set(JSON.parse(favData)); }
+                const tagData = localStorage.getItem('gallery_tags');
+                if (tagData) { artistTagsMap = JSON.parse(tagData); }
+            } catch (e) { console.error("Failed to load local storage data:", e); }
+        }
+        function saveFavorites() { localStorage.setItem('gallery_favorites', JSON.stringify(Array.from(favorites))); }
+        function saveTags() { localStorage.setItem('gallery_tags', JSON.stringify(artistTagsMap)); }
+        function getArtistTags(index) { return artistTagsMap[index] || []; }
+        initFavAndTags();
+
+        let allArtists = [];
+        let filteredArtists = [];
+        let displayedCount = 0;
+        const BATCH_SIZE = 50;
+        const BASE_CHARACTER_PROMPT = "1girl, solo, smiling, blond hair, twin tails, green eyes, Japanese school uniform, sailor collar, looking at viewer, detailed background, classroom background, depth of field";
+
+        // 从后端拉取 API
+        async function fetchArtists() {
+            try {
+                const res = await fetch('/api/artists');
+                allArtists = await res.json();
+                
+                calculateStats(allArtists);
+                filteredArtists = [...allArtists];
+                resetAndRenderFirstBatch();
+                setupIntersectionObserver();
+            } catch (e) {
+                console.error("Failed to load artists API:", e);
+            }
+        }
+
+        // 计算头部仪表大盘数据
+        function calculateStats(list) {
+            const total = list.length;
+            const generated = list.filter(a => a.generated).length;
+            const percent = total > 0 ? Math.round((generated / total) * 100) : 0;
+            
+            document.getElementById('stats-total').innerText = total;
+            document.getElementById('stats-generated').innerText = generated;
+            document.getElementById('stats-percent').innerText = `${percent}%`;
+        }
+
+        // 重置并渲染首屏批次
+        function resetAndRenderFirstBatch() {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = '';
+            displayedCount = 0;
+            
+            renderNextBatch();
+            
+            const sentinel = document.getElementById('scroll-sentinel');
+            if (filteredArtists.length > displayedCount) {
+                sentinel.style.display = 'flex';
+                sentinel.innerText = '✨ 向上滚动加载更多画师...';
+            } else {
+                sentinel.style.display = 'none';
+            }
+        }
+
+        // 渲染并追加下一批次卡片
+        function renderNextBatch() {
+            const grid = document.getElementById('gallery-grid');
+            const nextBatch = filteredArtists.slice(displayedCount, displayedCount + BATCH_SIZE);
+            
+            nextBatch.forEach(artist => {
+                const card = document.createElement('div');
+                const isKb = !!artist.kb;
+                card.className = `card ${artist.generated ? 'has-img' : ''} ${isKb ? 'is-kb' : ''}`;
+                card.setAttribute('data-index', artist.index);
+                
+                if (artist.generated && artist.filename) {
+                    card.style.setProperty('--card-img', `url("/images/thumbs/${encodeURIComponent(artist.filename)}")`);
+                    card.style.backgroundImage = `url("/images/thumbs/${encodeURIComponent(artist.filename)}")`;
+                    card.style.backgroundSize = 'cover';
+                    card.style.backgroundPosition = 'center';
+                }
+                
+                card.onclick = () => openModal(artist);
+                
+                const isFav = favorites.has(artist.index);
+                const artistTags = getArtistTags(artist.index);
+                let tagsHtml = '';
+                if (artistTags.length > 0) {
+                    tagsHtml = `<div class="card-tags-row">` + 
+                        artistTags.slice(0, 2).map(t => `<span class="card-mini-tag" title="${t}">${t}</span>`).join('') +
+                        (artistTags.length > 2 ? `<span class="card-mini-tag">...</span>` : '') +
+                        `</div>`;
+                }
+
+                card.innerHTML = `
+                    <button class="card-fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavFromCard(event, ${artist.index})" title="${isFav ? '取消收藏' : '收藏画师'}">★</button>
+                    <div class="card-idx">#${artist.index}</div>
+                    <div class="card-content">
+                        <div class="card-name" title="${artist.name}">${artist.name}</div>
+                        <div style="display: flex; gap: 0.3rem; align-items: center; flex-wrap: wrap;">
+                            <div class="status-badge ${artist.generated ? 'success' : 'danger'}">
+                                ${artist.generated ? '已合龙' : '未回填'}
+                            </div>
+                            ${isKb ? `<div class="status-badge" style="background: rgba(168, 85, 247, 0.25); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 0 8px rgba(168, 85, 247, 0.2);">🌟 核心</div>` : ''}
+                        </div>
+                        ${tagsHtml}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            
+            displayedCount += nextBatch.length;
+            
+            // 实时检查是否全部加载完毕
+            const sentinel = document.getElementById('scroll-sentinel');
+            if (displayedCount >= filteredArtists.length) {
+                sentinel.innerText = '🎉 已加载全部匹配画师画廊';
+                setTimeout(() => {
+                    if (displayedCount >= filteredArtists.length) {
+                        sentinel.style.display = 'none';
+                    }
+                }, 2000);
+            } else {
+                sentinel.style.display = 'flex';
+                sentinel.innerText = '✨ 向上滚动加载更多画师...';
+            }
+        }
+
+        // 绑定哨兵节点 IntersectionObserver
+        let sentinelObserver = null;
+        function setupIntersectionObserver() {
+            const sentinel = document.getElementById('scroll-sentinel');
+            
+            if (sentinelObserver) {
+                sentinelObserver.disconnect();
+            }
+            
+            sentinelObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && filteredArtists.length > displayedCount) {
+                    renderNextBatch();
+                }
+            }, {
+                rootMargin: '300px' // 视口距离底部 300 像素时提前无感加载，极度顺滑
+            });
+            
+            sentinelObserver.observe(sentinel);
+        }
+
+        // 搜索与筛选核心逻辑 (实时触发)
+        function filterGrid() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const batch = document.getElementById('batch-filter').value;
+            const status = document.getElementById('status-filter').value;
+            const favStatus = document.getElementById('favorite-filter').value;
+            
+            filteredArtists = allArtists.filter(artist => {
+                // 1. 搜索词检索 (包括自定义标签检索)
+                const artistTags = getArtistTags(artist.index).map(t => t.toLowerCase());
+                const matchesTags = artistTags.some(t => t.includes(query));
+                const matchesSearch = artist.name.toLowerCase().includes(query) || String(artist.index).includes(query) || matchesTags;
+                
+                // 2. 批次检索
+                let matchesBatch = true;
+                if (batch === 'first') matchesBatch = artist.index <= 500;
+                else if (batch === 'second') matchesBatch = artist.index > 500;
+                
+                // 3. 生成状态检索
+                let matchesStatus = true;
+                if (status === 'done') matchesStatus = artist.generated;
+                else if (status === 'missing') matchesStatus = !artist.generated;
+                
+                // 4. 收藏状态检索
+                let matchesFav = true;
+                if (favStatus === 'fav') matchesFav = favorites.has(artist.index);
+                else if (favStatus === 'unfav') matchesFav = !favorites.has(artist.index);
+                
+                return matchesSearch && matchesBatch && matchesStatus && matchesFav;
+            });
+            
+            resetAndRenderFirstBatch();
+        }
+
+        // 监听控制台输入
+        document.getElementById('search-input').addEventListener('input', filterGrid);
+        document.getElementById('batch-filter').addEventListener('change', filterGrid);
+        document.getElementById('status-filter').addEventListener('change', filterGrid);
+        document.getElementById('favorite-filter').addEventListener('change', filterGrid);
+
+        // 开启 Viewer 灯箱 Modal
+        let activeArtist = null;
+        function openModal(artist) {
+            activeArtist = artist;
+            const modal = document.getElementById('viewer-modal');
+            
+            document.getElementById('modal-title').innerText = artist.name;
+            document.getElementById('modal-idx').innerText = `#${artist.index}`;
+            
+            const statusBadge = document.getElementById('modal-status');
+            if (artist.generated) {
+                statusBadge.innerText = '已生成';
+                statusBadge.className = 'status-badge success';
+                document.getElementById('modal-img').src = `/images/${encodeURIComponent(artist.filename)}`;
+            } else {
+                statusBadge.innerText = '未回填';
+                statusBadge.className = 'status-badge danger';
+                document.getElementById('modal-img').src = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop'; // 优雅抽象毛玻璃占位
+            }
+            
+            // 组装极致分词格式 Prompt
+            const promptText = `artist_style : ${artist.name}, ${BASE_CHARACTER_PROMPT}`;
+            document.getElementById('modal-prompt').innerText = promptText;
+
+            // --- 渲染 17 核心馆藏深度解析 ---
+            const kbBox = document.getElementById('modal-kb-box');
+            if (artist.kb) {
+                document.getElementById('kb-alias').innerText = artist.kb.alias || '-';
+                document.getElementById('kb-genre').innerText = artist.kb.genre || '-';
+                document.getElementById('kb-genre').title = artist.kb.genre_detail || artist.kb.genre || '';
+                
+                const weightText = artist.kb.weight || '1.0';
+                document.getElementById('kb-weight').innerText = weightText;
+                
+                // 绘制推荐权重刻度条
+                const bar = document.getElementById('kb-weight-bar');
+                const rangeMatch = weightText.match(/([\d.]+)\s*-\s*([\d.]+)/);
+                if (rangeMatch) {
+                    const start = parseFloat(rangeMatch[1]);
+                    const end = parseFloat(rangeMatch[2]);
+                    const left = Math.max(0, Math.min(100, start * 100));
+                    const right = Math.max(0, Math.min(100, (1 - end) * 100));
+                    bar.style.left = `${left}%`;
+                    bar.style.right = `${right}%`;
+                    bar.style.background = 'linear-gradient(to right, var(--success), #a855f7)';
+                } else {
+                    const val = parseFloat(weightText) || 1.0;
+                    const left = Math.max(0, Math.min(100, val * 100));
+                    bar.style.left = `${left - 2}%`;
+                    bar.style.right = `${100 - left - 2}%`;
+                    bar.style.background = 'var(--success)';
+                }
+
+                // 避坑与指南
+                document.getElementById('kb-tips').innerText = artist.kb.overfit_tips || artist.kb.briefTips || '-';
+
+                // 视觉特征
+                const featuresUl = document.getElementById('kb-features');
+                featuresUl.innerHTML = '';
+                const features = artist.kb.features || [];
+                if (features.length > 0) {
+                    document.getElementById('kb-features-box').style.display = 'block';
+                    features.forEach(f => {
+                        const li = document.createElement('li');
+                        li.innerText = f;
+                        featuresUl.appendChild(li);
+                    });
+                } else {
+                    document.getElementById('kb-features-box').style.display = 'none';
+                }
+
+                // 黄金组合词
+                const goldenBox = document.getElementById('kb-golden-box');
+                if (artist.kb.golden_prompt) {
+                    goldenBox.style.display = 'block';
+                    document.getElementById('kb-golden-prompt').innerText = artist.kb.golden_prompt;
+                } else {
+                    goldenBox.style.display = 'none';
+                }
+
+                kbBox.style.display = 'block';
+            } else {
+                kbBox.style.display = 'none';
+            }
+            
+            // 渲染收藏状态和标签
+            renderModalFavAndTags();
+            
+            modal.classList.add('active');
+        }
+
+        // 关闭 Modal
+        function closeModal() {
+            document.getElementById('viewer-modal').classList.remove('active');
+        }
+
+        // 呼出/关闭风格维度手鉴
+        function toggleMatrixModal() {
+            document.getElementById('matrix-modal').classList.toggle('active');
+        }
+
+        // 复制 Prompt 功能
+        function copyPrompt() {
+            if (!activeArtist) return;
+            const promptText = `artist_style : ${activeArtist.name}, ${BASE_CHARACTER_PROMPT}`;
+            
+            navigator.clipboard.writeText(promptText).then(() => {
+                const toast = document.getElementById('toast');
+                toast.innerText = '复制成功！';
+                toast.classList.add('active');
+                setTimeout(() => {
+                    toast.classList.remove('active');
+                }, 2000);
+            });
+        }
+
+        // 复制黄金组合 Prompt
+        function copyGoldenPrompt() {
+            if (!activeArtist || !activeArtist.kb || !activeArtist.kb.golden_prompt) return;
+            const promptText = activeArtist.kb.golden_prompt;
+            
+            navigator.clipboard.writeText(promptText).then(() => {
+                const toast = document.getElementById('toast');
+                toast.innerText = '黄金 Prompt 复制成功！';
+                toast.classList.add('active');
+                setTimeout(() => {
+                    toast.classList.remove('active');
+                }, 2000);
+            });
+        }
+
+        // 渲染 Modal 内部的收藏按钮和标签列表
+        function renderModalFavAndTags() {
+            if (!activeArtist) return;
+            const index = activeArtist.index;
+            
+            // 1. 收藏星星状态
+            const favBtn = document.getElementById('modal-fav-btn');
+            if (favorites.has(index)) {
+                favBtn.classList.add('active');
+                favBtn.style.color = '#fde047';
+            } else {
+                favBtn.classList.remove('active');
+                favBtn.style.color = 'var(--text-muted)';
+            }
+            
+            // 2. 标签渲染
+            const container = document.getElementById('modal-tags-container');
+            container.innerHTML = '';
+            const tags = getArtistTags(index);
+            
+            tags.forEach(tag => {
+                const tagEl = document.createElement('span');
+                tagEl.className = 'modal-tag';
+                tagEl.innerHTML = `
+                    <span>${tag}</span>
+                    <button class="modal-tag-del" onclick="deleteTag(${index}, '${tag}')">×</button>
+                `;
+                container.appendChild(tagEl);
+            });
+        }
+
+        // 双通道：从卡片切换收藏状态
+        function toggleFavFromCard(event, index) {
+            if (event) event.stopPropagation(); // 阻止打开 Modal
+            
+            if (favorites.has(index)) {
+                favorites.delete(index);
+            } else {
+                favorites.add(index);
+            }
+            saveFavorites();
+            
+            // 局部刷新卡片的星星状态
+            const card = document.querySelector(`.card[data-index="${index}"]`);
+            if (card) {
+                const btn = card.querySelector('.card-fav-btn');
+                if (btn) {
+                    const isFav = favorites.has(index);
+                    btn.className = `card-fav-btn ${isFav ? 'active' : ''}`;
+                    btn.title = isFav ? '取消收藏' : '收藏画师';
+                }
+            }
+            
+            // 如果 Modal 当前开着该画师，同步刷新 Modal 星星
+            if (activeArtist && activeArtist.index === index) {
+                renderModalFavAndTags();
+            }
+        }
+
+        // 双通道：从 Modal 切换收藏状态
+        function toggleFavFromModal() {
+            if (!activeArtist) return;
+            const index = activeArtist.index;
+            
+            if (favorites.has(index)) {
+                favorites.delete(index);
+            } else {
+                favorites.add(index);
+            }
+            saveFavorites();
+            
+            // 同步刷新 Modal 自身 UI
+            renderModalFavAndTags();
+            
+            // 同步刷新背景卡片的星星状态
+            const card = document.querySelector(`.card[data-index="${index}"]`);
+            if (card) {
+                const btn = card.querySelector('.card-fav-btn');
+                if (btn) {
+                    const isFav = favorites.has(index);
+                    btn.className = `card-fav-btn ${isFav ? 'active' : ''}`;
+                    btn.title = isFav ? '取消收藏' : '收藏画师';
+                }
+            }
+        }
+
+        // 标签：回车添加标签事件监听
+        document.getElementById('modal-tag-input').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const tagVal = this.value.trim();
+                if (tagVal && activeArtist) {
+                    const index = activeArtist.index;
+                    if (!artistTagsMap[index]) {
+                        artistTagsMap[index] = [];
+                    }
+                    // 防重添加
+                    if (!artistTagsMap[index].includes(tagVal)) {
+                        artistTagsMap[index].push(tagVal);
+                        saveTags();
+                        renderModalFavAndTags();
+                        // 局部刷新该卡片的迷你标签预览
+                        refreshCardTagsPreview(index);
+                    }
+                    this.value = '';
+                }
+            }
+        });
+
+        // 标签：删除特定标签
+        function deleteTag(index, tagText) {
+            if (artistTagsMap[index]) {
+                artistTagsMap[index] = artistTagsMap[index].filter(t => t !== tagText);
+                if (artistTagsMap[index].length === 0) {
+                    delete artistTagsMap[index];
+                }
+                saveTags();
+                renderModalFavAndTags();
+                // 局部刷新该卡片的迷你标签预览
+                refreshCardTagsPreview(index);
+            }
+        }
+
+        // 局部刷新卡片底部的迷你标签
+        function refreshCardTagsPreview(index) {
+            const card = document.querySelector(`.card[data-index="${index}"]`);
+            if (card) {
+                const contentDiv = card.querySelector('.card-content');
+                if (contentDiv) {
+                    // 先移除现有的卡片标签行
+                    const existingRow = contentDiv.querySelector('.card-tags-row');
+                    if (existingRow) {
+                        existingRow.remove();
+                    }
+                    
+                    // 追加新的标签行
+                    const artistTags = getArtistTags(index);
+                    if (artistTags.length > 0) {
+                        const tagsRow = document.createElement('div');
+                        tagsRow.className = 'card-tags-row';
+                        tagsRow.innerHTML = artistTags.slice(0, 2).map(t => `<span class="card-mini-tag" title="${t}">${t}</span>`).join('') +
+                            (artistTags.length > 2 ? `<span class="card-mini-tag">...</span>` : '');
+                        contentDiv.appendChild(tagsRow);
+                    }
+                }
+            }
+        }
+
+        // 点击背景遮罩关闭 Modal
+        document.getElementById('viewer-modal').onclick = (e) => {
+            if (e.target.className === 'modal active') {
+                closeModal();
+            }
+        };
+
+        document.getElementById('matrix-modal').onclick = (e) => {
+            if (e.target.className === 'modal active') {
+                toggleMatrixModal();
+            }
+        };
+
+        // ================= AI 悬浮窗智能交互逻辑 =================
+        let chatHistory = [];
+
+        function toggleAiPanel() {
+            const panel = document.getElementById('ai-panel');
+            panel.classList.toggle('active');
+        }
+
+        function handleAiInputKey(e) {
+            if (e.key === 'Enter') {
+                sendAiMessage();
+            }
+        }
+
+        async function sendAiMessage() {
+            const inputBox = document.getElementById('ai-input-box');
+            const query = inputBox.value.trim();
+            if (!query) return;
+
+            inputBox.value = '';
+            
+            // 1. 渲染用户气泡
+            appendChatBubble('user', query);
+
+            // 2. 渲染 AI 加载气泡
+            const loadingBubbleId = appendChatBubble('ai', `
+                <div class="typing-indicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            `);
+
+            // 滚动到底部
+            const chatBody = document.getElementById('ai-chat-body');
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            chatHistory.push({ role: 'user', content: query });
+
+            try {
+                // 请求我们刚在 server.js 写好的反向代理路由
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ messages: chatHistory })
+                });
+
+                const data = await res.json();
+                
+                // 移除 loading 气泡
+                const loadBubble = document.getElementById(loadingBubbleId);
+                if (loadBubble) loadBubble.remove();
+
+                if (data.choices && data.choices[0] && data.choices[0].message) {
+                    const aiMsg = data.choices[0].message.content;
+                    chatHistory.push({ role: 'assistant', content: aiMsg });
+                    
+                    // 渲染 AI 气泡并解析黑科技联动芯片
+                    const renderedHtml = parseAiMessageChips(aiMsg);
+                    appendChatBubble('ai', renderedHtml);
+                } else if (data.error) {
+                    appendChatBubble('ai', `❌ 导师遇到了问题: ${data.error}`);
+                } else {
+                    appendChatBubble('ai', `❌ 导师收到了异常的响应数据，请确保 LLM 服务在 8317 端口正常运行。`);
+                }
+            } catch (e) {
+                console.error("AI chat error:", e);
+                const loadBubble = document.getElementById(loadingBubbleId);
+                if (loadBubble) loadBubble.remove();
+                appendChatBubble('ai', `❌ 连接本地 LLM 服务器失败！请确保您的 LLM 服务已经启动于 http://localhost:8317 并且 API key 正常。`);
+            }
+
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function appendChatBubble(role, contentHtml) {
+            const chatBody = document.getElementById('ai-chat-body');
+            const bubble = document.createElement('div');
+            const uniqueId = 'bubble-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
+            bubble.id = uniqueId;
+            bubble.className = `chat-bubble ${role}`;
+            bubble.innerHTML = contentHtml;
+            chatBody.appendChild(bubble);
+            return uniqueId;
+        }
+
+        // 正则解析 [#编号 画师名] 转换为可点击的芯片
+        function parseAiMessageChips(text) {
+            // 转义 HTML 字符防注入
+            let safeText = text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+
+            // 还原换行为 <br>，Markdown 格式略作适配
+            safeText = safeText.replace(/\n/g, '<br>');
+
+            // 解析特殊格式 [#编号 画师名]
+            const regex = /\[#(\d+)\s+([^\]]+)\]/g;
+            return safeText.replace(regex, (match, indexStr, nameStr) => {
+                const index = parseInt(indexStr, 10);
+                return `<button class="ai-chip" onclick="locateArtistFromAi(${index})" title="点击一键在对照馆中定位该画师卡片">✨ #${index} ${nameStr}</button>`;
+            });
+        }
+
+        // 黑科技联动：根据画师 Index 自动定位并弹起 Viewer 灯箱
+        function locateArtistFromAi(index) {
+            // 1. 查找此画师的数据
+            const artist = allArtists.find(a => a.index === index);
+            if (!artist) {
+                alert(`未能在画库中查找到编号为 #${index} 的画师数据！`);
+                return;
+            }
+
+            // 2. 清空当前的模糊搜索框
+            const searchInput = document.getElementById('search-input');
+            searchInput.value = artist.name;
+            
+            // 触发筛选
+            filterGrid();
+
+            // 3. 延迟滚动并弹起大图
+            setTimeout(() => {
+                // 滑动聚焦到对应的卡片
+                const card = document.querySelector(`.card[data-index="${index}"]`);
+                if (card) {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // 添加短暂的微光高亮闪烁提示
+                    card.style.borderColor = 'var(--success)';
+                    card.style.boxShadow = '0 0 30px var(--success)';
+                    setTimeout(() => {
+                        card.style.borderColor = '';
+                        card.style.boxShadow = '';
+                    }, 2000);
+                }
+                
+                // 4. 直接自动弹出高精灯箱 Modal，呈献极致出图！
+                openModal(artist);
+            }, 300);
+        }
+
+        // ================= RAG 知识库增强功能 =================
+
+        let ragSearchActive = false;
+        let ragResultsMap = {};  // { artist_index: similarity_score }
+        let ragDebounceTimer = null;
+
+        /**
+         * 加载 RAG 知识库统计，更新 header 显示
+         */
+        async function fetchRagStats() {
+            try {
+                const res = await fetch('/api/rag/stats');
+                const data = await res.json();
+                if (data.total_chunks !== undefined) {
+                    document.getElementById('stats-rag-chunks').innerText = data.total_chunks;
+                } else if (data.stats && data.stats.total_chunks !== undefined) {
+                    document.getElementById('stats-rag-chunks').innerText = data.stats.total_chunks;
+                }
+            } catch (e) {
+                console.warn('RAG stats unavailable:', e);
+                document.getElementById('stats-rag-chunks').innerText = 'RAG离线';
+            }
+        }
+
+        /**
+         * 画风语义搜索 - 核心函数
+         */
+        async function performRagSearch(query) {
+            if (!query || query.trim().length < 2) {
+                clearRagSearch();
+                return;
+            }
+
+            query = query.trim();
+
+            try {
+                const res = await fetch('/api/rag/search', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: query, top_k: 20 })
+                });
+                const data = await res.json();
+
+                if (data.results && data.results.length > 0) {
+                    // 构建相似度映射
+                    ragResultsMap = {};
+                    data.results.forEach(r => {
+                        if (!ragResultsMap[r.artist_index] || r.similarity > ragResultsMap[r.artist_index]) {
+                            ragResultsMap[r.artist_index] = r.similarity;
+                        }
+                    });
+
+                    ragSearchActive = true;
+                    
+                    // 按 RAG 相似度排序筛选画师
+                    const matchedIndices = new Set(data.results.map(r => r.artist_index));
+                    filteredArtists = allArtists.filter(a => matchedIndices.has(a.index));
+                    
+                    // 按 RAG 相似度排序
+                    filteredArtists.sort((a, b) => {
+                        const scoreA = ragResultsMap[a.index] || 0;
+                        const scoreB = ragResultsMap[b.index] || 0;
+                        return scoreB - scoreA;
+                    });
+
+                    resetAndRenderFirstBatch();
+                    document.getElementById('rag-search-clear').style.display = 'block';
+                    showToast(`🎯 语义搜索找到 ${data.results.length} 个匹配结果`);
+                } else {
+                    ragSearchActive = false;
+                    ragResultsMap = {};
+                    showToast('😅 未找到匹配的画师风格，请换一组描述词试试');
+                }
+            } catch (e) {
+                console.error('RAG search error:', e);
+                ragSearchActive = false;
+                showToast('❌ RAG 搜索暂时不可用，请确认 RAG 服务已启动');
+            }
+        }
+
+        /**
+         * 清除 RAG 搜索，恢复完整列表
+         */
+        function clearRagSearch() {
+            ragSearchActive = false;
+            ragResultsMap = {};
+            document.getElementById('rag-search-input').value = '';
+            document.getElementById('rag-search-clear').style.display = 'none';
+            
+            // 恢复常规筛选
+            filterGrid();
+            showToast('已清除语义搜索，恢复完整列表');
+        }
+
+        /**
+         * 重建 RAG 知识库索引
+         */
+        async function rebuildRagIndex() {
+            const btn = document.getElementById('rag-rebuild-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span>⏳</span> 重建中...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch('/api/rag/rebuild', { method: 'POST' });
+                const data = await res.json();
+                if (data.message) {
+                    showToast('✅ ' + data.message);
+                    fetchRagStats();
+                } else {
+                    showToast('❌ 重建失败');
+                }
+            } catch (e) {
+                console.error('RAG rebuild error:', e);
+                showToast('❌ 重建失败，RAG 服务不可用');
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        /**
+         * 绑定 RAG 搜索输入事件（带防抖）
+         */
+        document.getElementById('rag-search-input').addEventListener('input', function() {
+            const clearBtn = document.getElementById('rag-search-clear');
+            if (this.value.trim().length > 0) {
+                clearBtn.style.display = 'block';
+            } else {
+                clearBtn.style.display = 'none';
+                if (ragSearchActive) clearRagSearch();
+            }
+
+            if (ragDebounceTimer) clearTimeout(ragDebounceTimer);
+            const query = this.value.trim();
+            if (query.length >= 2) {
+                ragDebounceTimer = setTimeout(() => performRagSearch(query), 400);
+            }
+        });
+
+        // 回车直接触发搜索（跳过防抖等待）
+        document.getElementById('rag-search-input').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                if (ragDebounceTimer) clearTimeout(ragDebounceTimer);
+                performRagSearch(this.value.trim());
+            }
+        });
+
+        // 清除按钮
+        document.getElementById('rag-search-clear').addEventListener('click', clearRagSearch);
+
+        // ================= 修改卡片渲染以支持 RAG 相似度标签 =================
+
+        // 保存原始 renderNextBatch 的引用
+        const _origRenderNextBatch = renderNextBatch;
+
+        // 重写 renderNextBatch 以支持 RAG 相似度徽章
+        renderNextBatch = function() {
+            const grid = document.getElementById('gallery-grid');
+            const nextBatch = filteredArtists.slice(displayedCount, displayedCount + BATCH_SIZE);
+            
+            nextBatch.forEach(artist => {
+                const card = document.createElement('div');
+                const isKb = !!artist.kb;
+                card.className = `card ${artist.generated ? 'has-img' : ''} ${isKb ? 'is-kb' : ''}`;
+                card.setAttribute('data-index', artist.index);
+                
+                if (artist.generated && artist.filename) {
+                    card.style.setProperty('--card-img', `url("/images/thumbs/${encodeURIComponent(artist.filename)}")`);
+                    card.style.backgroundImage = `url("/images/thumbs/${encodeURIComponent(artist.filename)}")`;
+                    card.style.backgroundSize = 'cover';
+                    card.style.backgroundPosition = 'center';
+                }
+                
+                card.onclick = () => openModal(artist);
+                
+                const isFav = favorites.has(artist.index);
+                const artistTags = getArtistTags(artist.index);
+                let tagsHtml = '';
+                if (artistTags.length > 0) {
+                    tagsHtml = `<div class="card-tags-row">` + 
+                        artistTags.slice(0, 2).map(t => `<span class="card-mini-tag" title="${t}">${t}</span>`).join('') +
+                        (artistTags.length > 2 ? `<span class="card-mini-tag">...</span>` : '') +
+                        `</div>`;
+                }
+
+                // RAG 相似度徽章
+                let ragBadgeHtml = '';
+                if (ragSearchActive && ragResultsMap[artist.index] !== undefined) {
+                    const score = ragResultsMap[artist.index];
+                    const pct = Math.round(score * 100);
+                    const isHigh = score > 0.05;
+                    ragBadgeHtml = `<div class="status-badge" style="background: ${isHigh ? 'rgba(16,185,129,0.2)' : 'rgba(168,85,247,0.2)'}; color: ${isHigh ? 'var(--success)' : '#c084fc'}; border: 1px solid ${isHigh ? 'rgba(16,185,129,0.3)' : 'rgba(168,85,247,0.3)'}; box-shadow: 0 0 6px ${isHigh ? 'rgba(16,185,129,0.2)' : 'rgba(168,85,247,0.2)'};">🎯 匹配 ${pct}%</div>`;
+                }
+
+                card.innerHTML = `
+                    <button class="card-fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavFromCard(event, ${artist.index})" title="${isFav ? '取消收藏' : '收藏画师'}">★</button>
+                    <div class="card-idx">#${artist.index}</div>
+                    <div class="card-content">
+                        <div class="card-name" title="${artist.name}">${artist.name}</div>
+                        <div style="display: flex; gap: 0.3rem; align-items: center; flex-wrap: wrap;">
+                            <div class="status-badge ${artist.generated ? 'success' : 'danger'}">
+                                ${artist.generated ? '已合龙' : '未回填'}
+                            </div>
+                            ${isKb ? `<div class="status-badge" style="background: rgba(168, 85, 247, 0.25); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 0 8px rgba(168, 85, 247, 0.2);">🌟 核心</div>` : ''}
+                            ${ragBadgeHtml}
+                        </div>
+                        ${tagsHtml}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            
+            displayedCount += nextBatch.length;
+            
+            const sentinel = document.getElementById('scroll-sentinel');
+            if (displayedCount >= filteredArtists.length) {
+                sentinel.innerText = '🎉 已加载全部匹配画师画廊';
+                setTimeout(() => {
+                    if (displayedCount >= filteredArtists.length) {
+                        sentinel.style.display = 'none';
+                    }
+                }, 2000);
+            } else {
+                sentinel.style.display = 'flex';
+                sentinel.innerText = '✨ 向上滚动加载更多画师...';
+            }
+        };
+
+        // 增强 showToast 如果不存在
+        if (typeof showToast !== 'function') {
+            function showToast(msg) {
+                const toast = document.getElementById('toast');
+                toast.innerText = msg;
+                toast.classList.add('active');
+                setTimeout(() => toast.classList.remove('active'), 2500);
+            }
+        }
+
+        // 启动自初始化：获取画师数据 + RAG 统计
+        fetchArtists();
+        fetchRagStats();
+    </script>
+</body>
+</html>
